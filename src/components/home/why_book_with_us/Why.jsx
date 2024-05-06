@@ -22,14 +22,18 @@ const Why = () => {
             <li key={index}>{item}</li>
           ))}
         </ul>
-        <div className="bg-[#0E385C] cursor-pointer font-medium mt-[20px] text-white w-[171px] flex justify-center items-center rounded-[10px] p-[16px]">Create Account</div>
+        <div className="bg-[#0E385C] cursor-pointer font-medium mt-[20px] text-white w-[171px] flex justify-center items-center rounded-[10px] p-[16px]">
+          Create Account
+        </div>
       </div>
 
-      <img
-        className="w-[50%] pt-[20px] xl:absolute lg:absolute right-0 -top-[70px]"
-        src={bus2}
-        alt="bus"
-      />
+      <div className="relative w-full border">
+        <img
+          className="w-[100%] pt-[20px] xl:absolute lg:absolute right-0 -top-[80px]"
+          src={bus2}
+          alt="bus"
+        />
+      </div>
     </div>
   );
 };

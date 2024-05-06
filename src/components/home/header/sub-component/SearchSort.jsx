@@ -31,7 +31,7 @@ export default function SearchSort() {
   };
 
   return (
-    <div className=" flex flex-col text-white rounded-[5px] text-sm tracking-wide">
+    <div className=" flex flex-col overflow-hidden overflow-y-auto text-white rounded-[5px] text-sm tracking-wide">
       <div className=" bg-[#0E385C] bg-opacity-[80%] p-[30px] drop-shadow-xl shadow-[0px_4px_10px_#00000026]">
         <div className="flex w-full mb-[20px] gap-[20px]">
           <div className="flex flex-col gap-[10px]">
@@ -175,7 +175,7 @@ export default function SearchSort() {
           </div>
         </div>
       </div>
-      <div className="bg-white leading-[30.26px] text-[25px] p-[30px] border drop-shadow-xl border-b border-b-white shadow-[0px_4px_10px_#00000026] text-[#0E385C] grid grid-cols-3">
+      <div className="bg-white leading-[30.26px] text-[25px] p-[30px] border drop-shadow-xl border-b border-b-white shadow-[0px_4px_10px_#00000026] text-[#0E385C] grid grid-cols-1 xl:grid-cols-3 grid-cols-2">
         <div className="text-left">
           <p className="font-[600]">BOOK AND TRAVEL</p>
           <p className="font-[500]">WITH EASE</p>
