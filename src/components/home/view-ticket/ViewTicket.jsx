@@ -2,7 +2,7 @@ import React from "react";
 
 const ViewTicket = () => {
   return (
-    <div className="w-full p h-[300px] flex flex-col gap-[20px] justify-center items-center bg-white">
+    <div className="w-full px-12 pt-[200px] pb-[70px] h-auto flex flex-col gap-[20px] justify-center items-center bg-white">
       <p className=" text-[#616262] font-[600] text-[35px] leading-[42.36px]">
         View your previously booked tickets
       </p>

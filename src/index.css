@@ -31,15 +31,57 @@ a {
   list-style-type: disc;
 }
 
-@media only screen and (max-width: 768px) {
+.customShadow {
+  box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-modal {
+  position: fixed;
+  top: 83px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: height 0.5s ease;
+  z-index: 1000;
+}
+
+.dashboard-modal.open {
+  height: auto;
+}
+
+.dashboard-modal .modal-content {
+  padding: 20px;
+  color: white;
+}
+
+@media only screen and (min-width: 871px) {
+  .menu {
+    display: none;
+  }
+
+  .dashboard-modal {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 870px) {
+
+  .Links,
+  .Login {
+    display: none;
+  }
+
+
+}
+
+@media only screen and (max-width: 1023px) {
   .Why-us {
-    height: 500px;
+    height: 800px;
   }
 
   .Why-us img {
     width: 70%;
   }
-}
-.customShadow {
-  box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
 }
