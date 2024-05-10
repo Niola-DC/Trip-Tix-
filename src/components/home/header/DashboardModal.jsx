@@ -14,7 +14,7 @@ const DashboardModal = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="dashboard-modal open bg-[#0E385C] border-t border-t-white bg-opacity-[50%] "
+          className="dashboard-modal open bg-[#0E385C] border-t border-t-white bg-opacity-[70%] "
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}

@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  width: 100%;
+}
+
 h1,
 .p,
 span {
@@ -55,7 +59,23 @@ a {
   color: white;
 }
 
-@media only screen and (min-width: 871px) {
+select option {
+  background-color: #0E385C;
+  padding: 20px;
+  font-size: 15px;
+  color: white;
+}
+
+.active {
+  border-bottom: 2px solid #FBD007;
+}
+
+.active2 {
+  background-color: #FBD007;
+}
+
+
+@media only screen and (min-width: 991px) {
   .menu {
     display: none;
   }

@@ -1,65 +1,62 @@
-import React, { useState } from 'react'
-import { IoPersonSharp } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
-import Menu from './Menu';
+import React from "react";
+import { IoPersonSharp } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
+import Menu from "./Menu";
 
-export default function Links() {
-   const [activeLink, setActiveLink] = useState("Home");
-
-   const handleClick = (link) => {
-     setActiveLink(link);
-   };
-
+export default function Links() { 
   return (
     <div className="flex">
       <div className="flex Links items-center font-[400] leading-[29.05px] gap-[10px]  py-3 text-white rounded-[2rem] text-sm tracking-wide">
-        <p
-          className={`cursor-pointer text-[24px] p-[10px] ${
-            activeLink === "Home" ? "border-b-2 border-b-[#FBD007]" : ""
-          }`}
-          onClick={() => handleClick("Home")}
+        <NavLink
+          exact
+          to="/"
+          className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
+          activeClassName="active" // Apply 'active' class when link is active
+          onClick={() => setActiveLink("home")} // Set active link state
         >
           Home
-        </p>
-        <p
-          className={`cursor-pointer text-[24px] p-[10px] ${
-            activeLink === "About" ? "border-b-2 border-b-[#FBD007]" : ""
-          }`}
-          onClick={() => handleClick("About")}
+        </NavLink>
+        <NavLink
+          to="/aboutus"
+          className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
+          activeClassName="active"
+          onClick={() => setActiveLink("about")}
         >
           About
-        </p>
-        <p
-          className={`cursor-pointer text-[24px] p-[10px] ${
-            activeLink === "Travel" ? "border-b-2 border-b-[#FBD007]" : ""
-          }`}
-          onClick={() => handleClick("Travel")}
+        </NavLink>
+        <NavLink
+          to="/travel"
+          className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
+          activeClassName="active"
+          onClick={() => setActiveLink("travel")}
         >
           Travel
-        </p>
-        <p
-          className={`cursor-pointer text-[24px] p-[10px] ${
-            activeLink === "FAQs" ? "border-b-2 border-b-[#FBD007]" : ""
-          }`}
-          onClick={() => handleClick("FAQs")}
+        </NavLink>
+        <NavLink
+          to="/faqs"
+          className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
+          activeClassName="active"
+          onClick={() => setActiveLink("faqs")}
         >
           FAQs
-        </p>
-        <p
-          className={`cursor-pointer text-[24px] p-[10px] ${
-            activeLink === "Contact" ? "border-b-2 border-b-[#FBD007]" : ""
-          }`}
-          onClick={() => handleClick("Contact")}
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
+          activeClassName="active"
+          onClick={() => setActiveLink("contact")}
         >
           Contact
-        </p>
-        <Link
-          to={"/login"}
+        </NavLink>
+        <NavLink
+          to="/login"
           className="px-5 ml-[100px] py-2 flex Login justify-center font-[500] leading-[29.05px] items-center gap-2 rounded-[10px] text-white bg-transparent border border-white text-[24px] tracking-wide"
+          activeClassName="active"
+          onClick={() => setActiveLink("login")}
         >
           Sign in
           <IoPersonSharp />
-        </Link>
+        </NavLink>
       </div>
       <Menu />
     </div>

@@ -8,11 +8,16 @@ import { FaCalendarAlt } from "react-icons/fa";
 export default function SearchSort() {
   const [date, setDate] = useState("");
   const [returnDate, setReturnDate] = useState("");
-   const [activeLink, setActiveLink] = useState("bus1");
+  const [activeElement, setActiveElement] = useState("bus1");
+  const [activeBook, setActiveBook] = useState("book3");
 
-   const handleClick = (link) => {
-     setActiveLink(link);
-   };
+  const handleElementClick = (element) => {
+    setActiveElement(element);
+  };
+
+  const handleBookClick = (element) => {
+    setActiveBook(element);
+  };
 
   const handleDateChange = (event) => {
     const formattedDate = event.target.value
@@ -38,26 +43,26 @@ export default function SearchSort() {
             <p>Your choice</p>
             <div className="grid grid-cols-3 gap-[15px]">
               <div
-                className={`rounded-[5px] flex justify-center items-center p-[10px] bg-[white] text-[#0E385C] ${
-                  activeLink === "bus1" ? "bg-[#FBD007]" : ""
+                className={`bus1 rounded-[5px] flex justify-center items-center p-[10px] bg-[white] text-[#0E385C] ${
+                  activeElement === "bus1" ? "active2" : ""
                 }`}
-                onClick={() => handleClick("bus1")}
+                onClick={() => handleElementClick("bus1")}
               >
                 <FaBusSimple size={"1.3rem"} />
               </div>
               <div
-                className={`rounded-[5px] flex justify-center items-center p-[10px] bg-[white] text-[#0E385C] ${
-                  activeLink === "bus2" ? "bg-[#FBD007]" : ""
+                className={`bus2 rounded-[5px] flex justify-center items-center p-[10px] bg-[white] text-[#0E385C] ${
+                  activeElement === "bus2" ? "active2" : ""
                 }`}
-                onClick={() => handleClick("bus2")}
+                onClick={() => handleElementClick("bus2")}
               >
                 <RiBus2Fill size={"1.3rem"} />
               </div>
               <div
-                className={`rounded-[5px] flex justify-center items-center p-[10px] bg-[white] text-[#0E385C] ${
-                  activeLink === "car" ? "bg-[#FBD007]" : ""
+                className={`car rounded-[5px] flex justify-center items-center p-[10px] bg-[white] text-[#0E385C] ${
+                  activeElement === "car" ? "active2" : ""
                 }`}
-                onClick={() => handleClick("car")}
+                onClick={() => handleElementClick("car")}
               >
                 <FaCar size={"1.3rem"} />
               </div>
@@ -67,12 +72,7 @@ export default function SearchSort() {
             Trip
             <select className="text-black p-[10px] focus:outline-none focus:shadow-outline rounded-[5px]">
               <option value="">Local</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
+              <option value="">International</option>
             </select>
           </div>
         </div>
@@ -114,7 +114,7 @@ export default function SearchSort() {
                 placeholder="MM/DD/YYYY"
                 value={date}
                 onChange={handleDateChange}
-                className="text-black focus:outline-none rounded-r-[5px] w-full text-black focus:shadow-outline p-[10px]"
+                className="text-black focus:outline-none rounded-r-[5px] w-full focus:shadow-outline p-[10px]"
               />
             </div>
           </div>
@@ -129,32 +129,31 @@ export default function SearchSort() {
                 placeholder="MM/DD/YYYY"
                 value={returnDate}
                 onChange={handleReturnDateChange}
-                className="text-black focus:outline-none rounded-r-[5px] w-full text-black focus:shadow-outline p-[10px]"
+                className="text-black focus:outline-none rounded-r-[5px] w-full focus:shadow-outline p-[10px]"
               />
             </div>
           </div>
           <div className="flex flex-col gap-[5px]">
             Adult (18+)
             <select className="text-black p-[10px] focus:outline-none focus:shadow-outline rounded-[5px]">
-              <option value="">Select</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
+              <option disabled value="">
+                Select
+              </option>
+              <option value="18-20">18-20</option>
+              <option value="21-30">21-30</option>
+              <option value="40 and above">40+</option>
             </select>
           </div>
           <div className="flex flex-col gap-[5px]">
             Chrildren (0-17)
             <select className="text-black p-[10px] focus:outline-none focus:shadow-outline rounded-[5px]">
-              <option value="">Select</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
+              <option disabled value="">
+                Select
+              </option>
+              <option value="0-5">0-5</option>
+              <option value="6-10">6-10</option>
+              <option value="11-15">11-15</option>
+              <option value="16-17">16-17</option>
             </select>
           </div>
         </div>
@@ -175,19 +174,38 @@ export default function SearchSort() {
           </div>
         </div>
       </div>
-      <div className="bg-white leading-[30.26px] text-[25px] p-[30px] border drop-shadow-xl border-b border-b-white shadow-[0px_4px_10px_#00000026] text-[#0E385C] grid grid-cols-1 xl:grid-cols-3 grid-cols-2">
-        <div className="text-left">
-          <p className="font-[600]">BOOK AND TRAVEL</p>
-          <p className="font-[500]">WITH EASE</p>
-        </div>
-        <div className="text-center">
-          <p className="font-[600]">FAST & QUICK</p>
-          <p className="font-[500]">PICKUP SERVICE</p>
-        </div>
-        <div className="flex justify-end items-center">
-          <div className="bg-[#FBD007] w-[50%] font-[600] rounded-[5px] flex justify-center items-center p-[10px]">
-            BOOK TICKET
+      <div className="bg-white leading-[30.26px] w-full text-[25px] p-[30px] border drop-shadow-xl border-b border-b-white shadow-[0px_4px_10px_#00000026] text-[#0E385C] gap-[30px] grid grid-cols-2 xl:grid-cols-3 lg:grid-cols-2">
+        <div className="flex justify-center items-center">
+          <div
+            className={`book1 p-[10px] rounded-[5px] cursor-pointer ${
+              activeBook === "book1" ? "active2" : ""
+            }`}
+            onClick={() => handleBookClick("book1")}
+          >
+            <p className="font-[600]">BOOK AND TRAVEL</p>
+            <p className="font-[500]">WITH EASE</p>
           </div>
+        </div>
+        <div className="flex justify-center items-center">
+          <div
+            className={`book2 p-[10px] rounded-[5px] cursor-pointer ${
+              activeBook === "book2" ? "active2" : ""
+            }`}
+            onClick={() => handleBookClick("book2")}
+          >
+            <p className="font-[600]">FAST & QUICK</p>
+            <p className="font-[500]">PICKUP SERVICE</p>
+          </div>
+        </div>
+        <div className="flex justify-center  items-center">
+          <p
+            className={`book3 p-[10px] rounded-[5px] cursor-pointer font-[600] ${
+              activeBook === "book3" ? "active2" : ""
+            }`}
+            onClick={() => handleBookClick("book3")}
+          >
+            BOOK TICKET{" "}
+          </p>
         </div>
       </div>
     </div>

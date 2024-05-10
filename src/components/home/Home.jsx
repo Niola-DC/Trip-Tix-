@@ -5,7 +5,7 @@ import Why from "./why_book_with_us/Why";
 
 export default function Home() {
   return (
-    <section>
+    <section >
         <Header/>
         <ViewTicket/>
         <BookTicket/>

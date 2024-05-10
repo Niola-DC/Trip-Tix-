@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaFacebook } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [activeLanguage, setActiveLanguage] = useState("English");
@@ -50,7 +51,7 @@ const Footer = () => {
             </p>
             <div className="font-[400] flex flex-col gap-[20px] text-[14px] leading-[16.94px]">
               <p className="cursor-pointer">Home</p>
-              <p className="cursor-pointer">About</p>
+              <Link to={"/aboutus"} className="cursor-pointer">About</Link>
               <p className="cursor-pointer">Travel</p>
               <p className="cursor-pointer">FAQs</p>
             </div>

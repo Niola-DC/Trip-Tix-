@@ -1,10 +1,13 @@
 import Footer from "./assets/Footer";
+import AboutUs from "./components/aboutUs/AboutUs";
 import Home from "./components/home/Home";
 import {createBrowserRouter, ScrollRestoration, Outlet, RouterProvider} from "react-router-dom"
+import Navlinks from "./components/home/header/sub-component/Navlinks";
 
 const Layout = () => {
   return (
     <div>
+      <Navlinks/>
       <Outlet />
       <ScrollRestoration />
       <Footer />
@@ -14,20 +17,24 @@ const Layout = () => {
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Layout />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home />,
       },
       {
-        path: '/auth/login',
-        element: <Home />
+        path: "/auth/login",
+        element: <Home />,
       },
-    ]
-  }
-])
+      {
+        path: "/aboutus",
+        element: <AboutUs />,
+      },
+    ],
+  },
+]);
 
 function App () {
   return (
