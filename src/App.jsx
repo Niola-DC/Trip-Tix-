@@ -1,8 +1,8 @@
-import Footer from "./assets/Footer";
 import AboutUs from "./components/aboutUs/AboutUs";
 import Home from "./components/home/Home";
 import {createBrowserRouter, ScrollRestoration, Outlet, RouterProvider} from "react-router-dom"
 import Navlinks from "./components/home/header/sub-component/Navlinks";
+import Footer from "./components/footer/Footer";
 
 const Layout = () => {
   return (
