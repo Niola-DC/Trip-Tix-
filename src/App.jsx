@@ -6,7 +6,7 @@ import Footer from "./components/footer/Footer";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="max-w-[1200%]">
       <Navlinks/>
       <Outlet />
       <ScrollRestoration />

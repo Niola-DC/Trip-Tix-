@@ -22,10 +22,14 @@ import renault from '../images/Renault.png'
 import subaru from '../images/Subaru.png'
 import suzuki from '../images/Suzuki.png'
 import toyota from '../images/Toyota.png'
+import header_bus from '../images/header_bus.png'
+import buses from '../images/buses.png'
 
 export {
     bus1,
     bus2,
+    header_bus,
+    buses,
     Alfa_romeo,
     audi,
     bmw,

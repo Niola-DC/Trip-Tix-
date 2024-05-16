@@ -27,6 +27,12 @@ a {
   background-size: cover;
 }
 
+.header_bus {
+  background-image: url("./assets//images/faq_bus.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .y::before {
   content: '';
   position: absolute;
@@ -106,6 +112,42 @@ select option {
   overflow: hidden;
 }
 
+.modal {
+  z-index: 1000;
+}
+
+.modalAnimation .modal-content {
+  animation: scaleUp .1s ease-in;
+  transform-origin: 50% 50%;
+  /* Set transform origin to center */
+  z-index: 1000;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.content2 {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.5s cubic-bezier(0,1,0,1);
+}
+
+.content2.show {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1,0,1,0);
+}
+
+
 
 @media only screen and (min-width: 991px) {
   .menu {
@@ -116,6 +158,27 @@ select option {
     display: none;
   }
 
+}
+
+@media only screen and (max-width: 768px) {
+  .con {
+    flex-direction: column;
+    margin: 0 10px;
+  }
+
+  .faq-img2 {
+    margin-top: -100px;
+    margin-left: 50px;
+  }
+
+  .faq-img1 {
+    height: 350px;
+  }
+
+  .faq-img1,
+  .faq-img2 {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 991px) {

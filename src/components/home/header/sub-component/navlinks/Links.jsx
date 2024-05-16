@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoPersonSharp } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import Menu from "./Menu";
+import GetStartedModal from "../GetStartedModal";
 
 export default function Links() { 
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(true); // Always open the Dashboard
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false); // Close the Dashboard
+  };
+
   return (
     <div className="flex">
       <div className="flex Links items-center font-[400] leading-[29.05px] gap-[10px]  py-3 text-white rounded-[2rem] text-sm tracking-wide">
@@ -48,17 +59,17 @@ export default function Links() {
         >
           Contact
         </NavLink>
-        <NavLink
-          to="/login"
-          className="px-5 ml-[100px] py-2 flex Login justify-center font-[500] leading-[29.05px] items-center gap-2 rounded-[10px] text-white bg-transparent border border-white text-[24px] tracking-wide"
-          activeClassName="active"
-          onClick={() => setActiveLink("login")}
-        >
+
+        <div onClick={handleShowModal} className="px-5 ml-[100px] py-2 flex Login justify-center font-[500] leading-[29.05px] items-center gap-2 rounded-[10px] text-white bg-transparent border border-white text-[24px] tracking-wide">
           Sign in
           <IoPersonSharp />
-        </NavLink>
+        </div>
       </div>
       <Menu />
+      <GetStartedModal
+        isOpen={showModal}
+        onClose={handleCloseModal}
+      />
     </div>
   );
 }
