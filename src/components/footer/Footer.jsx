@@ -13,7 +13,7 @@ import { FaCircle } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col w-full mt-[30px] h-auto">
+    <div className="flex flex-col w-full  h-auto">
       <div className="grid grid-cols-1 w-full xl:grid-cols-2 lg:grid-cols-2 gap-[20px] text-left bg-[#0B142F]  p-[50px] text-white">
         <div className="flex flex-col gap-[20px] w-[80%] ">
           <p className="font-[600] text-[20px] leading-[24.2px] mb-[20px]">

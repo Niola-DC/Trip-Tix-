@@ -138,13 +138,13 @@ select option {
 .content2 {
   overflow: hidden;
   max-height: 0;
-  transition: all 0.5s cubic-bezier(0,1,0,1);
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
 }
 
 .content2.show {
   height: auto;
   max-height: 9999px;
-  transition: all 0.5s cubic-bezier(1,0,1,0);
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
 }
 
 
@@ -158,6 +158,12 @@ select option {
     display: none;
   }
 
+}
+
+@media only screen and (max-width: 700px) {
+  .view-ticket {
+    margin-top: 900px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -187,17 +193,17 @@ select option {
   .Login {
     display: none;
   }
-
-
 }
 
-@media only screen and (max-width: 1023px) {
-  .Why-us {
-    height: 800px;
+@media only screen and (max-width: 1013px) {
+  .view-ticket {
+    margin-top: 200px;
   }
+}
 
-  .Why-us img {
-    width: 70%;
+@media only screen and (max-width: 1300px) {
+  .view-ticket {
+    margin-top: 200px;
   }
 }
 

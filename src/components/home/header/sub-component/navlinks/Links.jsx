@@ -41,7 +41,7 @@ export default function Links() {
           activeClassName="active"
           onClick={() => setActiveLink("travel")}
         >
-          Travel
+          Booking
         </NavLink>
         <NavLink
           to="/faqs"

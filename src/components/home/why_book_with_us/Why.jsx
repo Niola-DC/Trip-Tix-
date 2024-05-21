@@ -9,8 +9,8 @@ const Why = () => {
   ];
 
   return (
-    <div className="w-full Why-us h-[370px] grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 relative py-8 bg-[#E1EBFF] px-12">
-      <div className="flex flex-col justify-center item-center text-[#0E385C]">
+    <div className="w-full Why-us h-auto gap-[100px] items-center flex xl:flex-row lg:flex-row flex-col relative pt-8 bg-[#E1EBFF] px-12">
+      <div className="flex w-full pb-[20px] xl:w-[50%] flex-col justify-center item-center text-[#0E385C]">
         <p className="font-[800] text-left text-[53px] leading-[62.11px] pb-[10px]">
           Why book with us?
         </p>
@@ -27,12 +27,10 @@ const Why = () => {
         </div>
       </div>
 
-      <div className="relative w-full border">
-        <img
-          className="w-[100%] pt-[20px] xl:absolute lg:absolute right-0 -top-[80px]"
-          src={bus2}
-          alt="bus"
-        />
+      <div className="flex w-[100%] xl:w-[50%]  justify-center items-center ">
+        <div className="-mt-[50px] xl:-mt-[80px]">
+          <img src={bus2} alt="bus" />
+        </div>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ const BookTicket = () => {
       <p className="text-[#2C2D2E] font-[700] text-[37px] leading-[44.8px]">
         Book your <span className=" text-[#0E385C]">tickets</span> in four steps
       </p>
-      <div className="grid grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 gap-[30px]">
+      <div className="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-2 gap-[40px]">
         <div className="flex flex-col gap-[15px] justify-center items-center">
           <div className="text-center text-[#0E385C] bg-[#CDCDCD] p-[4px] rounded-[20px] border">
             <FaBusSimple size={"1.5rem"} />
