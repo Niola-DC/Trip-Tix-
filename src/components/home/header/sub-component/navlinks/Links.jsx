@@ -50,7 +50,7 @@ export default function Links() {
           activeClassName="active"
           onClick={() => setActiveLink("faqs")}
         >
-          FAQs
+          FAQ
         </NavLink>
         <NavLink
           to="/contact"

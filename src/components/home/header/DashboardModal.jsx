@@ -52,7 +52,7 @@ const DashboardModal = ({ isOpen, onClose }) => {
               activeClassName="active"
               onClick={() => setActiveLink("faqs")}
             >
-              FAQs
+              FAQ
             </NavLink>
             <NavLink
               to="/contact"
