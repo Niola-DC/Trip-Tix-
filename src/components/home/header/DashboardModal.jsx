@@ -72,7 +72,6 @@ const DashboardModal = ({ isOpen, onClose }) => {
               <IoPersonSharp />
             </NavLink>
           </div>
-          <button onClick={onClose}>Close</button>
         </motion.div>
       )}
     </AnimatePresence>

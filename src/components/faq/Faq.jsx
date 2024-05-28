@@ -1,9 +1,12 @@
 import React from 'react'
+import FaqHeader from './header/FaqHeader'
+import FAQ from '../aboutUs/faqs/FAQ'
 
 const Faq = () => {
   return (
     <div>
-      we are good to go
+      <FaqHeader/>
+      <FAQ/>
     </div>
   )
 }

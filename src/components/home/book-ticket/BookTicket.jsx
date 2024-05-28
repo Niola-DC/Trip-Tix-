@@ -7,7 +7,7 @@ import { MdEventSeat } from "react-icons/md";
 const BookTicket = () => {
   return (
     <div className="w-full h-auto flex flex-col gap-[60px] justify-center items-center py-[100px] px-12 bg-[#F1F1F1]">
-      <p className="text-[#2C2D2E] font-[700] text-[37px] leading-[44.8px]">
+      <p className="text-[#2C2D2E] font-[700] text-center text-[34px] xl:text-[37px] lg:text-[37px] leading-[44.8px]">
         Book your <span className=" text-[#0E385C]">tickets</span> in four steps
       </p>
       <div className="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-2 gap-[40px]">
