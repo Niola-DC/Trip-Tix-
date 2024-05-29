@@ -3,6 +3,7 @@ import Home from "./components/home/Home";
 import {createBrowserRouter, ScrollRestoration, Outlet, RouterProvider} from "react-router-dom"
 import Navlinks from "./components/home/header/sub-component/Navlinks";
 import Footer from "./components/footer/Footer";
+import Travel from "./components/travel/Travel";
 
 const Layout = () => {
   return (
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/aboutus",
         element: <AboutUs />,
+      },
+      {
+        path: "/travel",
+        element: <Travel />,
       },
     ],
   },
