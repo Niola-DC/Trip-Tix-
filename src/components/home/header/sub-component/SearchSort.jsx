@@ -158,7 +158,7 @@ export default function SearchSort() {
           </div>
         </div>
         <div className="flex justify-between mb-[0px]">
-          <div className="bg-[#FBD007] p-[10px] text-[25px] font-[600] text-[#0E385C] flex justify-center items-center px-[50px] rounded-[5px]">
+          <div className="bg-[#FBD007] p-[10px] text-[18px] xl:text-[25px] lg:text-[25px] sm:text-[20px] font-[600] text-[#0E385C] flex justify-center items-center px-[50px] rounded-[5px]">
             SEARCH
           </div>
           <div>
@@ -174,7 +174,7 @@ export default function SearchSort() {
           </div>
         </div>
       </div>
-      <div className="bg-white leading-[30.26px] w-full text-[25px] p-[30px] border drop-shadow-xl border-b border-b-white shadow-[0px_4px_10px_#00000026] text-[#0E385C] gap-[30px] grid grid-cols-2 xl:grid-cols-3 lg:grid-cols-2">
+      <div className="bg-white leading-[30.26px] w-full text-[18px] xl:text-[25px] lg:text-[25px] sm:text-[20px] p-[30px] border drop-shadow-xl border-b border-b-white shadow-[0px_4px_10px_#00000026] text-[#0E385C] gap-[30px] grid grid-cols-2 xl:grid-cols-3 lg:grid-cols-2">
         <div className="flex justify-center items-center">
           <div
             className={`book1 p-[10px] rounded-[5px] cursor-pointer ${

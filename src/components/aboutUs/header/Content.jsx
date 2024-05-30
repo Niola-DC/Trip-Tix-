@@ -3,7 +3,7 @@ import React from 'react'
 const Content = () => {
   return (
     <div className="flex p gap-[20px] flex-col">
-      <div className="font-[600] p-[10px] pl-[30px] border-l-4 border-l-[#1976D2] rounded-l-[10px, 1px, 1px, 10px] p text-[48px] text-white leading-[72px]">
+      <div className="font-[600] p-[10px] pl-[30px] border-l-4 border-l-[#1976D2] rounded-l-[10px, 1px, 1px, 10px] p text-[30px] sm:text-[38px] xl:text-[48px] text-white leading-[72px]">
         <p>What is NIIT Travel Buddy</p>
         <p>And how valid is it?</p>
       </div>

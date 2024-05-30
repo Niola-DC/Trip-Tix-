@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import Menu from "./Menu";
 import GetStartedModal from "../GetStartedModal";
 
-export default function Links() { 
+export default function Links() {
   const [showModal, setShowModal] = useState(false);
 
   const handleShowModal = () => {
@@ -44,12 +44,12 @@ export default function Links() {
           Booking
         </NavLink>
         <NavLink
-          to="/faqs"
+          to="/faq"
           className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
           activeClassName="active"
           onClick={() => setActiveLink("faqs")}
         >
-          FAQs
+          FAQ
         </NavLink>
         <NavLink
           to="/contact"
@@ -60,16 +60,16 @@ export default function Links() {
           Contact
         </NavLink>
 
-        <div onClick={handleShowModal} className="px-5 ml-[100px] py-2 flex Login justify-center font-[500] leading-[29.05px] items-center gap-2 rounded-[10px] text-white bg-transparent border border-white text-[24px] tracking-wide">
+        <div
+          onClick={handleShowModal}
+          className="px-5 ml-[100px] py-2 flex cursor-pointer Login justify-center font-[500] leading-[29.05px] items-center gap-2 rounded-[10px] text-white bg-transparent border border-white text-[24px] tracking-wide"
+        >
           Sign in
           <IoPersonSharp />
         </div>
       </div>
       <Menu />
-      <GetStartedModal
-        isOpen={showModal}
-        onClose={handleCloseModal}
-      />
+      <GetStartedModal isOpen={showModal} onClose={handleCloseModal} />
     </div>
   );
 }

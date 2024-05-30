@@ -17,6 +17,7 @@ span {
 
 
 p,
+.font,
 li,
 a {
   font-family: "Roboto", sans-serif;
@@ -30,6 +31,12 @@ a {
 
 .header_bus {
   background-image: url("./assets//images/faq_bus.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.signup {
+  background-image: url("./assets//images/bus.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -66,6 +73,42 @@ a {
 
 .customShadow {
   box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #5871EB;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  background-color: #5871EB;
+}
+
+.custom-checkbox:checked {
+  background-color: #5871EB;
+}
+
+.content-text {
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  max-height: 90vh;
+  /* Maximum height to prevent overflow */
 }
 
 .dashboard-modal {
@@ -182,9 +225,18 @@ select option {
     height: 350px;
   }
 
+  .content-text {
+    padding: 10px;
+  }
+
+  .content-text,
   .faq-img1,
   .faq-img2 {
     width: 100%;
+  }
+
+  .signup {
+    display: none;
   }
 }
 
