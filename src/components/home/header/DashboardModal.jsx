@@ -50,7 +50,7 @@ const DashboardModal = ({ isOpen, onClose }) => {
               to="/faq"
               className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
               activeClassName="active"
-              onClick={() => setActiveLink("faqs")}
+              onClick={() => setActiveLink("faq")}
             >
               FAQ
             </NavLink>
