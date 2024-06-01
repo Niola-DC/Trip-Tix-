@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { TransportFilter } from "../TransportFilter";
 import TabComponent from "../TabComponent";
 import TabContent from "../TabContent";
+import Navlinks from "../home/header/sub-component/Navlinks";
 
 export default function Travel() {
   const [activeTab, setActiveTab] = useState(0);
@@ -18,6 +19,7 @@ export default function Travel() {
   return (
     <div className="pt-20">
       <div className="h-[40rem] md:h-80 bg-cover bg-center flex flex-col items-center justify-center hero-section relative">
+        <Navlinks/>
         <div className="mb-4">
           <TransportFilter />
         </div>

@@ -18,7 +18,7 @@ export default function Links() {
 
   return (
     <div className="flex">
-      <div className="flex Links items-center font-[400] leading-[29.05px] gap-[10px]  py-3 text-white rounded-[2rem] text-sm tracking-wide">
+      <div className="flex Links items-center font-[400] leading-[29.05px] gap-[10px] py-3 text-white rounded-[2rem] text-sm tracking-wide">
         <NavLink
           to="/"
           className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
