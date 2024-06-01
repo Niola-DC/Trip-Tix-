@@ -7,7 +7,7 @@ import Faq from "./components/faq/Faq";
 
 const Layout = () => {
   return (
-    <div className="max-w-[1200%]">
+    <div>
       <Navlinks/>
       <Outlet />
       <ScrollRestoration />

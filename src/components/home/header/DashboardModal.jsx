@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoPersonSharp } from "react-icons/io5";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const DashboardModal = ({ isOpen, onClose }) => {
      const [activeLink, setActiveLink] = useState("Home");
@@ -62,15 +62,13 @@ const DashboardModal = ({ isOpen, onClose }) => {
             >
               Contact
             </NavLink>
-            <NavLink
-              to="/login"
-              className="px-5 ml-[100px] py-2 flex Login justify-center font-[500] leading-[29.05px] items-center gap-2 rounded-[10px] text-white bg-transparent border border-white text-[24px] tracking-wide"
-              activeClassName="active"
-              onClick={() => setActiveLink("login")}
+            <button
+              // onClick={handleShowModal}
+              className="px-5 ml-[100px] py-2 flex cursor-pointer Login justify-center font-[500] leading-[29.05px] items-center gap-2 rounded-[10px] text-white bg-transparent border border-white text-[24px] tracking-wide"
             >
               Sign in
               <IoPersonSharp />
-            </NavLink>
+            </button>
           </div>
         </motion.div>
       )}

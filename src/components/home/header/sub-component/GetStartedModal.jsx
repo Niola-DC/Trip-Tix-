@@ -19,8 +19,8 @@ const GetStartedModal = ({ isOpen, onClose }) => {
     <div>
       {isOpen && (
         <div>
-          <div className="w-[100vw] modal bg-black/50 h-[100dvh] left-0 top-0 fixed">
-            <div className="modalAnimation flex flex-col gap-[30px] items-center py-[40px] lg:w-[50%] rounded-[60px] w-[95%] xl:w-[50%] h-auto p-7 bg-white left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] fixed">
+          <div className="fixed top-0 left-0 bg-black/80 w-full h-[100dvh] z-[50]" />
+          <div className="modalAnimation flex flex-col gap-[30px] items-center py-[40px] lg:w-[50%] rounded-[60px] w-[95%] md:w-[80%] h-auto p-7 bg-white left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] z-[100] fixed">
               <div className="flex items-center border-b-4 border-b-[#225B8B] pb-[20px] w-full relative justify-center">
                 <p className="font-[700] leading-[29.3px] text-[25px] text-[#2C2D2E]">
                   Login / Get My Tickets
@@ -59,7 +59,7 @@ const GetStartedModal = ({ isOpen, onClose }) => {
                 />
               )}
             </div>
-          </div>
+          
         </div>
       )}
     </div>
