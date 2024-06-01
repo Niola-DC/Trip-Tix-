@@ -3,6 +3,6 @@
 
 export default function Logo() {
   return (
-     <h1 className="text-3xl font-medium text-white">StephTour</h1>
+     <h1 className="text-3xl font-medium text-white">TripTix</h1>
   )
 }

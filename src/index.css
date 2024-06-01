@@ -6,6 +6,7 @@
 
 body {
   width: 100%;
+  font-family: Arial;
 }
 
 h1,
@@ -294,3 +295,20 @@ select option {
     height: 250dvh;
   }
 }
+
+.hero-section {
+  background: linear-gradient(
+    161.94deg, 
+    #121A33 12.26%, /* Light blue at 19.26% */
+    rgba(25, 118, 210, 0.5) 34.32%, /* Semi-transparent darker blue at 34.32% */
+    rgba(57, 113, 193, 0.9) 87.7%
+  ),
+  url('./assets/images/header_bus.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
