@@ -17,9 +17,8 @@ export default function Travel() {
   ];
 
   return (
-    <div className="pt-20">
-      <div className="h-[40rem] md:h-80 bg-cover bg-center flex flex-col items-center justify-center hero-section relative">
-        <Navlinks/>
+    <div>
+      <div className="h-[40rem] md:h-80 pt-20 bg-cover bg-center flex flex-col items-center justify-center hero-section relative">
         <div className="mb-4">
           <TransportFilter />
         </div>
@@ -27,7 +26,7 @@ export default function Travel() {
           <TabComponent tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
         </div>
       </div>
-        <TabContent content={tabs[activeTab].content} />
+      <TabContent content={tabs[activeTab].content} />
     </div>
   );
 }

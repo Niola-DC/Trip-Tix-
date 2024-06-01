@@ -4,11 +4,11 @@ import { IoPersonSharp } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 
 const DashboardModal = ({ isOpen, onClose }) => {
-     const [activeLink, setActiveLink] = useState("Home");
+  const [activeLink, setActiveLink] = useState("Home");
 
-     const handleClick = (link) => {
-       setActiveLink(link);
-     };
+  const handleClick = (link) => {
+    setActiveLink(link);
+  };
 
   return (
     <AnimatePresence>
@@ -62,13 +62,13 @@ const DashboardModal = ({ isOpen, onClose }) => {
             >
               Contact
             </NavLink>
-            <button
+            {/* <button
               // onClick={handleShowModal}
               className="px-5 ml-[100px] py-2 flex cursor-pointer Login justify-center font-[500] leading-[29.05px] items-center gap-2 rounded-[10px] text-white bg-transparent border border-white text-[24px] tracking-wide"
             >
               Sign in
               <IoPersonSharp />
-            </button>
+            </button> */}
           </div>
         </motion.div>
       )}

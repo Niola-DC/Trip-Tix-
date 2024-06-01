@@ -10,15 +10,14 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { IoRemoveOutline } from "react-icons/io5";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { FaCircle } from "react-icons/fa";
+import Logo from "../../helper/logo";
 
 const Footer = () => {
   return (
     <div className="flex flex-col w-full  h-auto">
       <div className="grid grid-cols-1 w-full xl:grid-cols-2 lg:grid-cols-2 gap-[20px] text-left bg-[#0B142F] p-[20px] sm:p-[30px] lg:p-[50px] xl:p-[50px] text-white">
         <div className="flex flex-col gap-[20px] w-[80%] ">
-          <p className="font-[600] text-[20px] leading-[24.2px] mb-[20px]">
-            Short Brief About Us
-          </p>
+          <Logo />
           <p className="font-[400] text-[14px] inline-block leading-[16.94px]">
             Our goal is to provide a smooth and hassle-free booking experience,
             ensuring that you can focus on enjoying your journey. With Niit
@@ -60,7 +59,7 @@ const Footer = () => {
               </div>
             </div>
             <form action="#">
-              <div className="flex gap-[10px] h-[50px]">
+              <div className="flex gap-[2px] sm:gap-[10px] h-[50px]">
                 <input
                   type="text"
                   placeholder="Enter Email *"
@@ -114,26 +113,26 @@ const Footer = () => {
                 </p>
               </div>
               <div className="font-[400] flex flex-col gap-[20px] text-[14px] leading-[20px]">
-                <div className="flex items-center gap-[5px]">
+                <Link to={"/"} className="flex items-center gap-[5px]">
                   <RiArrowRightSLine size={"1.5rem"} />
                   <p className="cursor-pointer">Home</p>
-                </div>
-                <div className="flex items-center gap-[5px]">
+                </Link>
+                <Link to={"/aboutus"} className="flex items-center gap-[5px]">
                   <RiArrowRightSLine size={"1.5rem"} />
                   <p className="cursor-pointer">About</p>
-                </div>
-                <div className="flex items-center gap-[5px]">
+                </Link>
+                <Link to={"/booking"} className="flex items-center gap-[5px]">
                   <RiArrowRightSLine size={"1.5rem"} />
-                  <p className="cursor-pointer">Travel</p>
-                </div>
+                  <p className="cursor-pointer">Booking</p>
+                </Link>
                 <div className="flex items-center gap-[5px]">
                   <RiArrowRightSLine size={"1.5rem"} />
                   <p className="cursor-pointer">Book</p>
                 </div>
-                <div className="flex items-center gap-[5px]">
+                <Link to={"/faq"} className="flex items-center gap-[5px]">
                   <RiArrowRightSLine size={"1.5rem"} />
                   <p className="cursor-pointer">FAQ</p>
-                </div>
+                </Link>
               </div>
             </div>
             <div>
@@ -176,6 +175,10 @@ const Footer = () => {
             &copy; 2024 | All Rights Reserved | Powered by Team Festac
           </p>
           <hr className="w-[33%]" />
+        </div>
+        <div className="flex justify-center items-center">
+
+        <Logo />
         </div>
       </div>
     </div>

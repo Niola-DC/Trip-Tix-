@@ -7,7 +7,7 @@ const Content = () => {
         <p>What is NIIT Travel Buddy</p>
         <p>And how valid is it?</p>
       </div>
-      <div className="w-auto flex flex-col gap-[20px] font-[400] text-[16px] leading-[30px] text-[#C2C2C2]">
+      <div className="w-auto flex flex-col gap-[20px] font-[400] text-[17px] leading-[30px] text-white">
         <p className="inline-block">
           Welcome to Niit Travel Buddy, your ultimate travel companion for
           seamless online ticket booking! At Niit Travel Buddy, we understand
