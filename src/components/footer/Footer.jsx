@@ -65,7 +65,7 @@ const Footer = () => {
                   className="border rounded-[5px] border-white bg-transparent text-white p-[10px] focus:outline-none focus:shadow-outline"
                 />
                 <button
-                  className="bg-[#E1EBFF] w-[20%] sm:w-full flex justify-center items-center rounded-[5px] text-[#0B142F] p-[20px]"
+                  className="bg-[#E1EBFF] flex justify-center items-center rounded-[5px] text-[#0B142F] p-[20px]"
                   type="submit"
                 >
                   <BsArrowRightShort size={"1.5rem"} />
