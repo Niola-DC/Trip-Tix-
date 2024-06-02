@@ -167,7 +167,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#0B142F] w-full flex flex-col gap-[20px] px-[50px] pb-[50px] text-white">
+      <div className="bg-[#0B142F] w-full flex flex-col gap-[20px] sm:px-[50px] pb-[50px] text-white">
         <div className="flex justify-center items-center gap-2 text-[#757575] w-full p-[10px]">
           <hr className="w-[33%]" />
           <p className="font-[400] text-[14px] leading-[16.94px]">
