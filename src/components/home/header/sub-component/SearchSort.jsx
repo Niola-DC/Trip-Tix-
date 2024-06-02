@@ -41,7 +41,7 @@ export default function SearchSort() {
         <div className="flex w-full mb-[20px] gap-[20px]">
           <div className="flex flex-col gap-[5px] sm:gap-[10px]">
             <p>Your choice</p>
-            <div className="grid grid-cols-3 gap-[15px]">
+            <div className="grid grid-cols-3 gap-[10px] sm:gap-[15px]">
               <div
                 className={`bus1 rounded-[5px] flex justify-center items-center p-[10px] bg-[white] text-[#0E385C] ${
                   activeElement === "bus1" ? "active2" : ""

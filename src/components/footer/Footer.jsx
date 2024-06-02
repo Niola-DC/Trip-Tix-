@@ -59,14 +59,14 @@ const Footer = () => {
               </div>
             </div>
             <form action="#">
-              <div className="flex gap-[2px] sm:gap-[10px] h-[50px]">
+              <div className="flex gap-[5px] sm:gap-[10px] h-[50px]">
                 <input
                   type="text"
                   placeholder="Enter Email *"
                   className="border rounded-[5px] border-white bg-transparent text-white p-[10px] focus:outline-none focus:shadow-outline"
                 />
                 <button
-                  className="bg-[#E1EBFF] flex justify-center items-center rounded-[5px] text-[#0B142F] p-[20px]"
+                  className="bg-[#E1EBFF] w-[20%] sm:w-full flex justify-center items-center rounded-[5px] text-[#0B142F] p-[20px]"
                   type="submit"
                 >
                   <BsArrowRightShort size={"1.5rem"} />
@@ -135,7 +135,7 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div>
+            <div className="flex flex-col w-full">
               <div className="flex items-center mb-[20px] text-white gap-[5px]">
                 <IoRemoveOutline size={"1.5rem"} />
                 <p className="font-[600] text-[18px] leading-[20px]">
@@ -157,8 +157,8 @@ const Footer = () => {
                   <FaCircle />
                   <p>Abuja Address</p>
                 </div>
-                <div className="border-l flex justify-center items-center p-[10px] border-l-white">
-                  <p className="cursor-pointer inline-block">
+                <div className="border-l flex w-full justify-center items-center md:p-[8px] border-l-white">
+                  <p className="cursor-pointer flex justify-center items-center w-full pl-[9px]">
                     University neighborhood, Civan Alley, No:1, Allure tower,
                     unit:384 Avcilar/Istanbul
                   </p>

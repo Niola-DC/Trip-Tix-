@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { IoPersonSharp } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 
 const DashboardModal = ({ isOpen, onClose }) => {
