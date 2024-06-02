@@ -20,8 +20,7 @@ const Footer = () => {
           <Logo />
           <p className="font-[400] text-[14px] inline-block leading-[16.94px]">
             Our goal is to provide a smooth and hassle-free booking experience,
-            ensuring that you can focus on enjoying your journey. With Niit
-            Travel Buddy, you can expect convenience, reliability, and
+            ensuring that you can focus on enjoying your journey. With TripTix, you can expect convenience, reliability, and
             exceptional customer service
           </p>
           <hr />

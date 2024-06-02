@@ -158,7 +158,7 @@ export default function SearchSort() {
             </select>
           </div>
         </div>
-        <div className="flex sm:flex-row flex-col w-full justify-between mb-[0px]">
+        <div className="flex sm:flex-row gap-[10px] flex-col w-full justify-between mb-[0px]">
           <div className="bg-[#FBD007] p-[10px] text-[18px] xl:text-[25px] lg:text-[25px] sm:text-[20px] font-[600] text-[#0E385C] flex justify-center items-center px-[50px] rounded-[5px]">
             SEARCH
           </div>
