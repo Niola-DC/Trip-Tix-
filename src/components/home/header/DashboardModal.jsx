@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import { IoPersonSharp } from "react-icons/io5";
 
 const DashboardModal = ({ isOpen, onClose }) => {
   const [activeLink, setActiveLink] = useState("Home");
@@ -21,7 +22,6 @@ const DashboardModal = ({ isOpen, onClose }) => {
         >
           <div className="modal-content flex flex-col">
             <NavLink
-              exact
               to="/"
               className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
               activeClassName="active" // Apply 'active' class when link is active
@@ -33,7 +33,7 @@ const DashboardModal = ({ isOpen, onClose }) => {
               to="/aboutus"
               className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
               activeClassName="active"
-              onClick={() => setActiveLink("about")}
+              onClick={() => setActiveLink("aboutus")}
             >
               About
             </NavLink>
@@ -61,13 +61,14 @@ const DashboardModal = ({ isOpen, onClose }) => {
             >
               Contact
             </NavLink>
-            {/* <button
+
+            <div
               // onClick={handleShowModal}
-              className="px-5 ml-[100px] py-2 flex cursor-pointer Login justify-center font-[500] leading-[29.05px] items-center gap-2 rounded-[10px] text-white bg-transparent border border-white text-[24px] tracking-wide"
+              className="px-5 py-2 flex cursor-pointer Login justify-center font-[500] leading-[29.05px] items-center gap-2 rounded-[10px] text-white bg-transparent border border-white text-[24px] tracking-wide"
             >
               Sign in
               <IoPersonSharp />
-            </button> */}
+            </div>
           </div>
         </motion.div>
       )}
