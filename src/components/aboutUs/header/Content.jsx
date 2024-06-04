@@ -4,20 +4,20 @@ const Content = () => {
   return (
     <div className="flex p gap-[20px] flex-col">
       <div className="font-[600] p-[10px] pl-[30px] border-l-4 border-l-[#1976D2] rounded-l-[10px, 1px, 1px, 10px] p text-[30px] sm:text-[38px] xl:text-[48px] text-white leading-[72px]">
-        <p>What is NIIT Travel Buddy</p>
+        <p>What is TripTix</p>
         <p>And how valid is it?</p>
       </div>
-      <div className="w-auto flex flex-col gap-[20px] font-[400] text-[16px] leading-[30px] text-[#C2C2C2]">
+      <div className="w-auto flex flex-col gap-[20px] font-[400] text-[17px] leading-[30px] text-white">
         <p className="inline-block">
-          Welcome to Niit Travel Buddy, your ultimate travel companion for
-          seamless online ticket booking! At Niit Travel Buddy, we understand
+          Welcome to TripTrix, your ultimate travel companion for
+          seamless online ticket booking! At TripTix, we understand
           that planning a journey can be stressful, and we're here to simplify
           that process for you. Whether you're traveling for business or
           leisure, our platform offers a user-friendly interface that allows you
           to book your travel tickets with ease and efficiency.
         </p>
         <p>
-          Join us on your next adventure and let Niit Travel Buddy be your
+          Join us on your next adventure and let TripTix be your
           trusted partner in travel!
         </p>
       </div>

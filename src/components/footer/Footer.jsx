@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -10,19 +10,17 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { IoRemoveOutline } from "react-icons/io5";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { FaCircle } from "react-icons/fa";
+import Logo from "../../helper/logo";
 
 const Footer = () => {
   return (
     <div className="flex flex-col w-full  h-auto">
       <div className="grid grid-cols-1 w-full xl:grid-cols-2 lg:grid-cols-2 gap-[20px] text-left bg-[#0B142F] p-[20px] sm:p-[30px] lg:p-[50px] xl:p-[50px] text-white">
         <div className="flex flex-col gap-[20px] w-[80%] ">
-          <p className="font-[600] text-[20px] leading-[24.2px] mb-[20px]">
-            Short Brief About Us
-          </p>
+          <Logo />
           <p className="font-[400] text-[14px] inline-block leading-[16.94px]">
             Our goal is to provide a smooth and hassle-free booking experience,
-            ensuring that you can focus on enjoying your journey. With Niit
-            Travel Buddy, you can expect convenience, reliability, and
+            ensuring that you can focus on enjoying your journey. With TripTix, you can expect convenience, reliability, and
             exceptional customer service
           </p>
           <hr />
@@ -60,11 +58,11 @@ const Footer = () => {
               </div>
             </div>
             <form action="#">
-              <div className="flex gap-[10px] h-[50px]">
+              <div className="flex gap-[5px] sm:gap-[10px] h-[50px]">
                 <input
                   type="text"
                   placeholder="Enter Email *"
-                  className="border rounded-[5px] border-white bg-transparent text-white p-[10px] focus:outline-none focus:shadow-outline"
+                  className="border rounded-[5px] w-full border-white bg-transparent text-white p-[10px] focus:outline-none focus:shadow-outline"
                 />
                 <button
                   className="bg-[#E1EBFF] flex justify-center items-center rounded-[5px] text-[#0B142F] p-[20px]"
@@ -114,29 +112,29 @@ const Footer = () => {
                 </p>
               </div>
               <div className="font-[400] flex flex-col gap-[20px] text-[14px] leading-[20px]">
-                <div className="flex items-center gap-[5px]">
+                <Link to={"/"} className="flex items-center gap-[5px]">
                   <RiArrowRightSLine size={"1.5rem"} />
                   <p className="cursor-pointer">Home</p>
-                </div>
-                <div className="flex items-center gap-[5px]">
+                </Link>
+                <Link to={"/aboutus"} className="flex items-center gap-[5px]">
                   <RiArrowRightSLine size={"1.5rem"} />
                   <p className="cursor-pointer">About</p>
-                </div>
-                <div className="flex items-center gap-[5px]">
+                </Link>
+                <Link to={"/booking"} className="flex items-center gap-[5px]">
                   <RiArrowRightSLine size={"1.5rem"} />
-                  <p className="cursor-pointer">Travel</p>
-                </div>
+                  <p className="cursor-pointer">Booking</p>
+                </Link>
                 <div className="flex items-center gap-[5px]">
                   <RiArrowRightSLine size={"1.5rem"} />
                   <p className="cursor-pointer">Book</p>
                 </div>
-                <div className="flex items-center gap-[5px]">
+                <Link to={"/faq"} className="flex items-center gap-[5px]">
                   <RiArrowRightSLine size={"1.5rem"} />
                   <p className="cursor-pointer">FAQ</p>
-                </div>
+                </Link>
               </div>
             </div>
-            <div>
+            <div className="flex flex-col w-full">
               <div className="flex items-center mb-[20px] text-white gap-[5px]">
                 <IoRemoveOutline size={"1.5rem"} />
                 <p className="font-[600] text-[18px] leading-[20px]">
@@ -158,8 +156,8 @@ const Footer = () => {
                   <FaCircle />
                   <p>Abuja Address</p>
                 </div>
-                <div className="border-l flex justify-center items-center p-[10px] border-l-white">
-                  <p className="cursor-pointer inline-block">
+                <div className="border-l flex w-full justify-center items-center md:p-[8px] border-l-white">
+                  <p className="cursor-pointer flex justify-center items-center w-full pl-[9px]">
                     University neighborhood, Civan Alley, No:1, Allure tower,
                     unit:384 Avcilar/Istanbul
                   </p>
@@ -169,13 +167,17 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#0B142F] w-full flex flex-col gap-[20px] px-[50px] pb-[50px] text-white">
+      <div className="bg-[#0B142F] w-full flex flex-col gap-[20px] sm:px-[50px] pb-[50px] text-white">
         <div className="flex justify-center items-center gap-2 text-[#757575] w-full p-[10px]">
           <hr className="w-[33%]" />
           <p className="font-[400] text-[14px] leading-[16.94px]">
             &copy; 2024 | All Rights Reserved | Powered by Team Festac
           </p>
           <hr className="w-[33%]" />
+        </div>
+        <div className="flex justify-center items-center">
+
+        <Logo />
         </div>
       </div>
     </div>

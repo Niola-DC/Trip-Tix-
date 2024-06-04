@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import Logo from "../../../../helper/logo";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 
 const SignUpModal = ({ isOpen, onClose }) => {
+  const [open, setOpen] = useState(false);
+
+  const toggle = () => {
+    setOpen(!open);
+  }
+
   return (
     <div>
       {isOpen && (
@@ -24,7 +30,7 @@ const SignUpModal = ({ isOpen, onClose }) => {
                     <input
                       type="text"
                       placeholder="Enter your name"
-                      className="border border-[#282A2F] bg-[#EFF0F3] rounded-[5px] p-[15px] w-full"
+                      className="border border-[#282A2F] focus:outline-none focus:shadow-outline bg-[#EFF0F3] rounded-[5px] p-[15px] w-full"
                     />
                   </div>
                   <div className="flex flex-col text-[#696F79] font-[500] text-[16px] leading-[24px] gap-[5px]">
@@ -32,16 +38,25 @@ const SignUpModal = ({ isOpen, onClose }) => {
                     <input
                       type="text"
                       placeholder="Enter email address"
-                      className="border border-[#282A2F] bg-[#EFF0F3] rounded-[5px] p-[15px] w-full"
+                      className="border border-[#282A2F] focus:outline-none focus:shadow-outline bg-[#EFF0F3] rounded-[5px] p-[15px] w-full"
                     />
                   </div>
                   <div className="flex flex-col text-[#696F79] font-[500] text-[16px] leading-[24px] gap-[5px]">
-                    <p>Create password*</p>
-                    <input
-                      type="text"
-                      placeholder="Create password"
-                      className="border border-[#282A2F] bg-[#EFF0F3] rounded-[5px] p-[15px] w-full"
-                    />
+                    <p>Your Password*</p>
+                    <div className="flex justify-between border border-[#282A2F] bg-[#EFF0F3] rounded-[5px]">
+                      <input
+                        type={open === false ? "text" : "password"}
+                        placeholder="Enter your password"
+                        className="bg-[#EFF0F3] w-full p-[15px] focus:outline-none focus:shadow-outline"
+                      />
+                      <div className="flex justify-center items-center p-[15px] text-xl">
+                        {open === false ? (
+                          <FiEyeOff onClick={toggle} />
+                        ) : (
+                          <FiEye onClick={toggle} />
+                        )}
+                      </div>
+                    </div>
                   </div>
                   <div className="flex items-center gap-[10px] text-[#696F79] font-[500] text-[16px] leading-[24px]">
                     <input

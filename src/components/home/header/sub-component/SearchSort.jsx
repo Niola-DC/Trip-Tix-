@@ -39,9 +39,9 @@ export default function SearchSort() {
     <div className=" flex flex-col overflow-hidden overflow-y-auto text-white rounded-[5px] text-sm tracking-wide">
       <div className=" bg-[#0E385C] bg-opacity-[80%] p-[30px] drop-shadow-xl shadow-[0px_4px_10px_#00000026]">
         <div className="flex w-full mb-[20px] gap-[20px]">
-          <div className="flex flex-col gap-[10px]">
+          <div className="flex flex-col gap-[5px] sm:gap-[10px]">
             <p>Your choice</p>
-            <div className="grid grid-cols-3 gap-[15px]">
+            <div className="grid grid-cols-3 gap-[10px] sm:gap-[15px]">
               <div
                 className={`bus1 rounded-[5px] flex justify-center items-center p-[10px] bg-[white] text-[#0E385C] ${
                   activeElement === "bus1" ? "active2" : ""
@@ -68,9 +68,9 @@ export default function SearchSort() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-[10px] w-[30%]">
+          <div className="flex flex-col gap-[6px] w-[30%]">
             Trip
-            <select className="text-black p-[10px] focus:outline-none focus:shadow-outline rounded-[5px]">
+            <select className="text-black p-[12px] focus:outline-none focus:shadow-outline rounded-[5px]">
               <option value="">Local</option>
               <option value="">International</option>
             </select>
@@ -154,10 +154,11 @@ export default function SearchSort() {
               <option value="6-10">6-10</option>
               <option value="11-15">11-15</option>
               <option value="16-17">16-17</option>
+              <option value="0-5">None</option>
             </select>
           </div>
         </div>
-        <div className="flex justify-between mb-[0px]">
+        <div className="flex sm:flex-row gap-[10px] flex-col w-full justify-between mb-[0px]">
           <div className="bg-[#FBD007] p-[10px] text-[18px] xl:text-[25px] lg:text-[25px] sm:text-[20px] font-[600] text-[#0E385C] flex justify-center items-center px-[50px] rounded-[5px]">
             SEARCH
           </div>

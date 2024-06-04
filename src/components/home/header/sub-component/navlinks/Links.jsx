@@ -6,6 +6,7 @@ import GetStartedModal from "../GetStartedModal";
 
 export default function Links() {
   const [showModal, setShowModal] = useState(false);
+  const [activeLink, setActiveLink] = useState("Home");
 
   const handleShowModal = () => {
     setShowModal(true); // Always open the Dashboard
@@ -17,9 +18,8 @@ export default function Links() {
 
   return (
     <div className="flex">
-      <div className="flex Links items-center font-[400] leading-[29.05px] gap-[10px]  py-3 text-white rounded-[2rem] text-sm tracking-wide">
+      <div className="flex Links items-center font-[400] leading-[29.05px] gap-[10px] py-3 text-white rounded-[2rem] text-sm tracking-wide">
         <NavLink
-          exact
           to="/"
           className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
           activeClassName="active" // Apply 'active' class when link is active
@@ -31,15 +31,15 @@ export default function Links() {
           to="/aboutus"
           className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
           activeClassName="active"
-          onClick={() => setActiveLink("about")}
+          onClick={() => setActiveLink("aboutus")}
         >
           About
         </NavLink>
         <NavLink
-          to="/travel"
+          to="/booking"
           className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
           activeClassName="active"
-          onClick={() => setActiveLink("travel")}
+          onClick={() => setActiveLink("booking")}
         >
           Booking
         </NavLink>
@@ -47,7 +47,7 @@ export default function Links() {
           to="/faq"
           className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
           activeClassName="active"
-          onClick={() => setActiveLink("faqs")}
+          onClick={() => setActiveLink("faq")}
         >
           FAQ
         </NavLink>
