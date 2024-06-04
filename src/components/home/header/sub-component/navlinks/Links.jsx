@@ -36,7 +36,7 @@ export default function Links() {
           About
         </NavLink>
         <NavLink
-          to="/booking"
+          to="/travel"
           className="cursor-pointer text-[24px] p-[10px] focus:border-b-2 focus:border-b-[#FBD007]"
           activeClassName="active"
           onClick={() => setActiveLink("booking")}

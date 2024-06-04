@@ -8,7 +8,7 @@ import Faq from "./components/faq/Faq";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="max-w-[1200%]">
       <Navlinks/>
       <Outlet />
       <ScrollRestoration />
@@ -22,18 +22,11 @@ const router = createBrowserRouter([
     path: '/',
     element: <Layout />,
     children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/aboutus",
-        element: <AboutUs />,
-      },
-      {
-        path: "/travel",
-        element: <Travel />,
-      },
+      { path: '/', element: <Home /> },
+      { path: 'aboutus', element: <AboutUs /> },
+      { path: 'faq', element: <Faq /> },
+      { path: '/travel', element: <Travel /> },
+
     ],
   },
 ]);
