@@ -9,7 +9,7 @@ export default function Travel() {
 
   const tabs = [
     { label: '21 Tue', content: 'Content for Tuesday' },
-    { label: 'WED 22', content: 'Content for Wednesday' },
+    { label: '22 Wed', content: 'Content for Wednesday' },
     { label: '23 Thur', content: 'Content for Thursday' },
     { label: '24 Fri', content: 'Content for Friday' },
     { label: '25 Sat', content: 'Content for Saturday' },
