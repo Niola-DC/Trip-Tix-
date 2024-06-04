@@ -1,4 +1,5 @@
 import React from 'react';
+import Bus from "../assets/images/bus22.png"
 import { BsAlarm, BsArrowRight, BsBusFrontFill } from 'react-icons/bs';
 
 const TripCard = ({ tripData }) => {
@@ -7,7 +8,7 @@ const TripCard = ({ tripData }) => {
   return (
     <div className=" my-10 md:px-10 mx-auto space-x-4 bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row">
       <div className="md:w-1/3">
-        <img src="src/assets/images/bus22.png" alt="Bus" className="object-cover h-full w-full" />
+        <img src={Bus} alt="Bus" className="object-cover h-full w-full" />
       </div>
       <div className="md:w-2/3 p-4 flex flex-col justify-between">
         <div className="flex flex-wrap gap-14 justify-between items-center mb-2">
