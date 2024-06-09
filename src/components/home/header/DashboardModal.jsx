@@ -36,7 +36,7 @@ const DashboardModal = ({ isOpen, onClose }) => {
             <NavLink to="/aboutus" className="cursor-pointer text-[24px] p-[10px]" onClick={() => handleLinkClick("aboutus")}>
               About
             </NavLink>
-            <NavLink to="/booking" className="cursor-pointer text-[24px] p-[10px]" onClick={() => handleLinkClick("booking")}>
+            <NavLink to="/travel" className="cursor-pointer text-[24px] p-[10px]" onClick={() => handleLinkClick("travel")}>
               Booking
             </NavLink>
             <NavLink to="/faq" className="cursor-pointer text-[24px] p-[10px]" onClick={() => handleLinkClick("faq")}>
