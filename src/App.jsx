@@ -3,14 +3,14 @@ import Home from "./components/home/Home";
 import {createBrowserRouter, ScrollRestoration, Outlet, RouterProvider} from "react-router-dom"
 import Navlinks from "./components/home/header/sub-component/Navlinks";
 import Footer from "./components/footer/Footer";
-import Faq from "./components/faq/Faq";
 import Travel from "./components/travel/Travel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Faq from "./components/faq/Faq";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="max-w-[1200%]">
       <Navlinks/>
       <Outlet />
       <ScrollRestoration />
@@ -27,7 +27,8 @@ const router = createBrowserRouter([
       { path: '/', element: <Home /> },
       { path: 'aboutus', element: <AboutUs /> },
       { path: 'faq', element: <Faq /> },
-      { path: 'booking', element: <Travel /> },
+      { path: '/travel', element: <Travel /> },
+
     ],
   },
 ]);
