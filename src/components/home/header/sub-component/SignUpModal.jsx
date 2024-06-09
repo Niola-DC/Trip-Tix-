@@ -24,14 +24,14 @@ const SignUpModal = ({ isOpen, onClose }) => {
     <div>
       {isOpen && (
         <div>
-          <div className="modalAnimation p flex h-auto flex-col gap-[30px] items-center py-7 lg:w-[90vw] w-[93vw] xl:w-[80vw]  p-7 bg-white left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] fixed">
+          <div className="modalAnimation p flex h-auto flex-col gap-[30px] items-center py-7 sm:w-[90vw] w-[100vw] xl:w-[80vw]  p-7 bg-white left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] fixed">
             <div className="flex w-full h-full">
               <div className="w-[50%] content-text px-[20px] pr-[40px] flex gap-[15px] flex-col">
                 <span className="absolute p-[5px] text-black border-[2px] rounded-[20px] border-black top-10 right-14">
                   <AiOutlineClose size={"1.5rem"} onClick={onClose} />
                 </span>
                 <h1 className="text-3xl font-medium text-black">StephTour</h1>
-                <p className="mt-[15px] font-medium lg:font-[590] text-[#2C2D2E] text-[30px] leading-[45px]">
+                <p className="mt-[15px] font-medium lg:font-[590] text-[#2C2D2E] text-[27px] sm:text-[30px] leading-[45px]">
                   Create an Account 👋
                 </p>
                 <p className="text-[#8692A6] font-[400] text-[18px] leading-[28px]">
@@ -92,7 +92,7 @@ const SignUpModal = ({ isOpen, onClose }) => {
                   <p className="font-[400] text-[14px] leading-[16.94px]">or</p>
                   <hr className="w-[50%]" />
                 </div>
-                <button className="flex p-[15px] justify-center px-[50px] rounded-[6px] font text-[16px] font-medium gap-6 bg-black text-white items-center">
+                <button className="flex p-[15px] justify-center px-[50px] rounded-[6px] font text-[16px] font-medium gap-3 lg:gap-6 bg-black text-white items-center">
                   <div className="w-[20px]">
                     <img src={google} alt="google" />
                   </div>

@@ -120,7 +120,7 @@ const Footer = () => {
                   <RiArrowRightSLine size={"1.5rem"} />
                   <p className="cursor-pointer">About</p>
                 </Link>
-                <Link to={"/booking"} className="flex items-center gap-[5px]">
+                <Link to={"/travel"} className="flex items-center gap-[5px]">
                   <RiArrowRightSLine size={"1.5rem"} />
                   <p className="cursor-pointer">Booking</p>
                 </Link>
