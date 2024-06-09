@@ -24,10 +24,12 @@ import suzuki from '../images/Suzuki.png'
 import toyota from '../images/Toyota.png'
 import header_bus from '../images/header_bus.png'
 import buses from '../images/buses.png'
+import google from '../images/google.png'
 
 export {
     bus1,
     bus2,
+    google,
     header_bus,
     buses,
     Alfa_romeo,

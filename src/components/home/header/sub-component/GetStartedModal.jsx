@@ -2,17 +2,28 @@ import React, { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import { SlArrowRight } from "react-icons/sl";
 import SignUpModal from "./SignUpModal";
+import SignInModal from "./SignInModal";
 
 const GetStartedModal = ({ isOpen, onClose }) => {
   const [showSignUpModal, setShowSignUpModal] = useState(false);
+  const [showSignInModal, setShowSignInModal] = useState(false);
 
-  const handleShowSignUpModal = () => {
+  const handleShowSignUpModal = () => { 
     setShowSignUpModal(true);
     
   };
 
   const handleCloseSignUpModal = () => {
     setShowSignUpModal(false);
+  };
+
+  const handleShowSignInModal = () => {
+    setShowSignInModal(true);
+    
+  };
+
+  const handleCloseSignInModal = () => {
+    setShowSignInModal(false);
   };
 
   return (
@@ -25,15 +36,15 @@ const GetStartedModal = ({ isOpen, onClose }) => {
                 <p className="font-[700] leading-[29.3px] text-[25px] text-[#2C2D2E]">
                   Login / Get My Tickets
                 </p>
-                <span className="absolute top-0 right-0">
+                <span className="absolute text-black top-0 right-0">
                   <IoCloseSharp size={"2rem"} onClick={onClose} />
                 </span>
               </div>
-              <div className="flex flex-col justify-center items-center">
+              <div className="flex flex-col text-black justify-center items-center">
                 <p>Login to download or manage your tickets.</p>
                 <p>Please select your preferred login method</p>
               </div>
-              <div className="border-[3px] rounded-[10px] p-[20px] text-[#3E6F99] border-[#3E6F99] w-full flex justify-between items-center">
+            <div onClick={handleShowSignInModal} className="border-[3px] rounded-[10px] p-[20px] text-[#3E6F99] border-[#3E6F99] w-full flex justify-between items-center">
                 <p className="font-[400] text-[18px] leading-[21.09px]">
                   Click here to sign in
                 </p>
@@ -56,6 +67,12 @@ const GetStartedModal = ({ isOpen, onClose }) => {
                 <SignUpModal
                   isOpen={showSignUpModal}
                   onClose={handleCloseSignUpModal}
+                />
+              )}
+              {showSignInModal && (
+                <SignInModal
+                  isOpen={showSignInModal}
+                  onClose={handleCloseSignInModal}
                 />
               )}
             </div>

@@ -5,6 +5,8 @@ import Navlinks from "./components/home/header/sub-component/Navlinks";
 import Footer from "./components/footer/Footer";
 import Faq from "./components/faq/Faq";
 import Travel from "./components/travel/Travel";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Layout = () => {
   return (

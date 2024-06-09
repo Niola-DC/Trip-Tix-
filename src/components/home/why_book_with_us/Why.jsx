@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { bus2 } from "../../../assets/images";
+import GetStartedModal from "../header/sub-component/GetStartedModal";
 
 const Why = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(true); // Always open the Dashboard
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false); // Close the Dashboard
+  };
+
   const items = [
     "Manage and cancel your trip with ease",
     "Save your payment method and billing information",
@@ -22,7 +33,7 @@ const Why = () => {
             <li key={index}>{item}</li>
           ))}
         </ul>
-        <div className="bg-[#0E385C] cursor-pointer font-medium mt-[20px] text-white w-[171px] flex justify-center items-center rounded-[10px] p-[16px]">
+        <div onClick={handleShowModal} className="bg-[#0E385C] cursor-pointer font-medium mt-[20px] text-white w-[171px] flex justify-center items-center rounded-[10px] p-[16px]">
           Create Account
         </div>
       </div>
@@ -32,6 +43,7 @@ const Why = () => {
           <img src={bus2} alt="bus" />
         </div>
       </div>
+      <GetStartedModal isOpen={showModal} onClose={handleCloseModal} />
     </div>
   );
 };
