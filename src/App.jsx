@@ -7,6 +7,7 @@ import Travel from "./components/travel/Travel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Faq from "./components/faq/Faq";
+import Contact from "./components/contact/Contact";
 
 const Layout = () => {
   return (
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
       { path: 'aboutus', element: <AboutUs /> },
       { path: 'faq', element: <Faq /> },
       { path: '/travel', element: <Travel /> },
-
+      { path: '/contact', element: <Contact /> },
     ],
   },
 ]);
