@@ -25,7 +25,7 @@ const SignInModal = ({ isOpen, onClose }) => {
         <div>
             {isOpen && (
                 <div>
-                    <div className="modalAnimation p flex h-auto flex-col gap-[30px] items-center py-7 sm:w-[90vw] w-[100vw] xl:w-[80vw]  p-7 bg-white left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] fixed">
+                    <div className="modalAnimation p flex h-dvh flex-col gap-[30px] items-center py-7 w-[100vw] p-7 bg-white left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] fixed">
                         <div className="flex w-full h-full">
                             <div className="w-[50%] content-text px-[20px] pr-[40px] flex gap-[15px] flex-col">
                                 <span className="absolute text-black p-[5px] border-[2px] rounded-[20px] border-black top-10 right-14">
