@@ -3,7 +3,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
 import { google } from '../../../../assets/images';
 
-const SignInModal = ({ onClose, setFormType }) => {
+const SignInModal = ({ setFormType }) => {
     const [open, setOpen] = useState(false);
 
     const toggle = () => {

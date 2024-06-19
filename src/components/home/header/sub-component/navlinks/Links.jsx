@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import Menu from "./Menu";
 import Modals from "../Modals";
 
-export default function Links() {
+export default function Links({ handleToggleModal }) {
   const [showModal, setShowModal] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
 
@@ -67,7 +67,7 @@ export default function Links() {
           <IoPersonSharp />
         </div>
       </div>
-      <Menu />
+      <Menu handleToggleModal={handleToggleModal} />
       <Modals isOpen={showModal} onClose={handleCloseModal} />
     </div>
   );

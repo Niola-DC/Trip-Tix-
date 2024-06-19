@@ -21,10 +21,10 @@ const Modals = ({ isOpen, onClose }) => {
                         <GetStartedModal onClose={onClose} setFormType={setFormType} />
                     )}
                     {formType === "signup" && (
-                        <SignUpModal onClose={onClose} setFormType={setFormType} />
+                        <SignUpModal setFormType={setFormType} />
                     )}
                     {formType === "signin" && (
-                        <SignInModal onClose={onClose} setFormType={setFormType} />
+                        <SignInModal setFormType={setFormType} />
                     )}
                 </motion.div>
             </div>

@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { google } from "../../../../assets/images";
-import SignInModal from "./SignInModal";
 
-const SignUpModal = ({ onClose, setFormType }) => {
+const SignUpModal = ({ setFormType }) => {
   const [open, setOpen] = useState(false);
 
   const toggle = () => {
@@ -14,7 +13,7 @@ const SignUpModal = ({ onClose, setFormType }) => {
   return (
     <div>
         <div>
-          <div className="modalAnimation p flex h-dvh flex-col gap-[30px] items-center py-7 w-[100vw] p-7 bg-white left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] fixed">
+          <div className="modalAnimation p flex h-screen flex-col gap-[30px] items-center py-7 w-[100vw] p-7 bg-white left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] fixed">
             <div className="flex w-full h-full">
               <div className="w-[50%] content-text px-[20px] pr-[40px] flex gap-[15px] flex-col">
                 <span className="absolute p-[5px] text-black border-[2px] rounded-[20px] border-black top-10 right-14">
