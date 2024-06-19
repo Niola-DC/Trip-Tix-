@@ -3,7 +3,7 @@ import { buses } from '../../../assets/images'
 
 const ContactInfo = () => {
     return (
-        <div className='mt-[500px] grid grid-cols-1 xl:grid-cols-2 w-full lg:grid-cols-2 gap-[50px] h-auto p-[30px] sm:mt-[200px]'>
+        <div className='mt-[500px] grid grid-cols-1 xl:grid-cols-2 w-full lg:grid-cols-2 gap-[50px] h-auto p-[40px] sm:mt-[200px]'>
             <div className="w-[100%] con max-w-[1000px] flex items-center justify-center">
                 <div className="header_bus faq-img1 -mt-[15px] rounded-[10px] w-[80%] h-[400px]"></div>
                 <div className="w-[40%] faq-img2 -ml-[150px] mt-[220px] min-h-[200px]">

@@ -8,7 +8,7 @@ const ContactContent = () => {
                 <p className='sm:text-6xl text-4xl font-[900]'>CONTACT US</p>
                 <p className='text-base font-medium'>We’re here to help and answer any questions you might have. We look forward to hearing from you!</p>
             </div>
-            <div className='bg-white px-[20px] py-[30px] flex flex-col rounded-xl h-auto drop-shadow-xl shadow-[0px_4px_10px_#00000026]'>
+            <div className='bg-white px-[20px] sm:px-[30px] py-[30px] flex flex-col rounded-xl h-auto drop-shadow-xl shadow-[0px_4px_10px_#00000026]'>
                 <form action="#">
                     <div className='grid grid-cols-1 sm:grid-cols-2 gap-5'>
                         <div className='flex mt-3 flex-col gap-2'>
