@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Bus from "../assets/images/bus22.png"
 import { BsAlarm, BsArrowRight, BsBusFrontFill } from 'react-icons/bs';
+import SeatModal from './SeatModal';
 
 const TripCard = ({ tripData }) => {
   const { departureTime, arrivalTime, origin, destination, seatsAvailable, adultPrice, childPrice } = tripData;
+  const [isSeatModalOpen, setIsSeatModalOpen] = useState(false);
+
+  const handleSeatModalClose = () => {
+    setIsSeatModalOpen(false);
+  };
+
+  const handleOpenSeatModal = () => {
+    setIsSeatModalOpen(true);
+  };
 
   return (
     <div className=" my-10 md:px-10 mx-auto space-x-4 bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row">
@@ -35,10 +45,14 @@ const TripCard = ({ tripData }) => {
           <p className="text-green-600 font-semibold">Adult ₦{adultPrice}</p>
           <p className="text-green-600 font-semibold">Child ₦{childPrice}</p>
         </div>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button onClick={handleOpenSeatModal} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           View Seats
         </button>
       </div>
+      <SeatModal
+        isOpen={isSeatModalOpen}
+        onClose={handleSeatModalClose}
+      />
     </div>
   );
 };
