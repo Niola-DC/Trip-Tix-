@@ -100,13 +100,6 @@ a {
   background-color: #5871EB;
 }
 
-.content-text {
-  overflow-y: auto;
-  /* Enable vertical scrolling */
-  max-height: 90vh;
-  /* Maximum height to prevent overflow */
-}
-
 .dashboard-modal {
   position: fixed;
   top: 83px;
