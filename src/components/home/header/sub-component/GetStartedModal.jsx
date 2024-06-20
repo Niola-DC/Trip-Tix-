@@ -32,7 +32,7 @@ const GetStartedModal = ({ isOpen, onClose }) => {
                 <p>Login to download or manage your tickets.</p>
                 <p>Please select your preferred login method</p>
               </div>
-            <div onClick={handleLogin} className="border-[3px] rounded-[10px] p-[10px] sm:p-[20px] text-[#3E6F99] border-[#3E6F99] w-full flex justify-between items-center">
+            <div onClick={handleLogin} className="border-[3px] cursor-pointer rounded-[10px] p-[10px] sm:p-[20px] text-[#3E6F99] border-[#3E6F99] w-full flex justify-between items-center">
                 <p className="font-[400] text-[18px] leading-[21.09px]">
                   Click here to sign in
                 </p>
@@ -42,7 +42,7 @@ const GetStartedModal = ({ isOpen, onClose }) => {
               </div>
               <div
                 onClick={handleSignUp}
-                className="border-[3px] p-[10px] sm:p-[20px] rounded-[10px] text-[#3E6F99] border-[#3E6F99] w-full flex justify-between items-center"
+                className="border-[3px] cursor-pointer p-[10px] sm:p-[20px] rounded-[10px] text-[#3E6F99] border-[#3E6F99] w-full flex justify-between items-center"
               >
                 <p className="font-[400] text-[18px] leading-[21.09px]">
                   Click here to create an account

@@ -12,8 +12,8 @@ const Menu = () => {
   };
 
   const handleShowGetStartedModal = () => {
-    setIsGetStartedModalOpen(true);
     setIsDashboardModalOpen(false); // Close the DashboardModal
+    setIsGetStartedModalOpen(true);
   };
 
   const handleCloseGetStartedModal = () => {
