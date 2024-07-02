@@ -11,7 +11,7 @@ const BookTicket = () => {
         Book your <span className=" text-[#0E385C]">tickets</span> in four steps
       </p>
       <div className="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-2 gap-[40px]">
-        <div className="flex flex-col gap-[15px] justify-center items-center">
+        <div className="flex flex-col cursor-pointer gap-[15px] justify-center items-center">
           <div className="text-center text-[#0E385C] bg-[#CDCDCD] p-[4px] rounded-[20px] border">
             <FaBusSimple size={"1.5rem"} />
           </div>
@@ -22,7 +22,7 @@ const BookTicket = () => {
             Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
           </p>
         </div>
-        <div className="flex flex-col gap-[15px] justify-center items-center">
+        <div className="flex cursor-pointer flex-col gap-[15px] justify-center items-center">
           <div className="text-center text-[#0E385C] bg-[#CDCDCD] p-[4px] rounded-[20px] border">
             <MdEventSeat size={"1.5rem"} />
           </div>
@@ -33,7 +33,7 @@ const BookTicket = () => {
             Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
           </p>
         </div>
-        <div className="flex flex-col gap-[15px] justify-center items-center">
+        <div className="flex cursor-pointer flex-col gap-[15px] justify-center items-center">
           <div className="text-center text-[#0E385C] bg-[#CDCDCD] p-[4px] rounded-[20px] border">
             <FaMoneyCheckDollar size={"1.5rem"} />
           </div>
@@ -44,7 +44,7 @@ const BookTicket = () => {
             Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
           </p>
         </div>
-        <div className="flex flex-col gap-[15px] justify-center items-center">
+        <div className="flex flex-col cursor-pointer gap-[15px] justify-center items-center">
           <div className="text-center text-[#0E385C] bg-[#CDCDCD] p-[4px] rounded-[20px] border">
             <BsFillTicketPerforatedFill size={"1.5rem"} />
           </div>

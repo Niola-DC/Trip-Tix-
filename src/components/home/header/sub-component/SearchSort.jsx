@@ -111,7 +111,8 @@ export default function SearchSort() {
               </div>
               <input
                 type="date"
-                className="text-black custom-date-input focus:outline-none rounded-r-[5px] w-full focus:shadow-outline p-[10px]"
+                placeholder="mm/dd/yyyy"
+                className="text-black bg-white custom-date-input focus:outline-none rounded-r-[5px] w-full focus:shadow-outline p-[10px]"
               />
             </div>
           </div>
@@ -123,7 +124,8 @@ export default function SearchSort() {
               </div>
               <input
                 type="date"
-                className="text-black custom-date-input focus:outline-none rounded-r-[5px] w-full focus:shadow-outline p-[10px]"
+                placeholder="mm/dd/yyyy"
+                className="text-black bg-white custom-date-input focus:outline-none rounded-r-[5px] w-full focus:shadow-outline p-[10px]"
               />
             </div>
           </div>

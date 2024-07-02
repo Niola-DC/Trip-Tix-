@@ -1,6 +1,16 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Content = () => {
+ const navigate = useNavigate();
+
+ const HandleBooking = () => {
+   navigate('/travel');
+ }
+ const HandleContact = () => {
+   navigate('/contact');
+ }
+
   return (
     <div className="flex p gap-[20px] flex-col">
       <div className="font-[600] p-[10px] pl-[30px] border-l-4 border-l-[#1976D2] rounded-l-[10px, 1px, 1px, 10px] p text-[30px] sm:text-[38px] xl:text-[48px] text-white leading-[72px]">
@@ -22,10 +32,10 @@ const Content = () => {
         </p>
       </div>
       <div className="flex gap-[20px] font-[500] text-[18px] leading-[21.94px] ">
-        <div className="cursor-pointer border flex justify-center p-[10px] rounded-[8px] px-[20px] items-center bg-white drop-shadow-xl shadow-[0px_4px_10px_#00000026]">
+        <div onClick={HandleBooking} className="cursor-pointer border flex justify-center p-[10px] rounded-[8px] px-[20px] items-center bg-white drop-shadow-xl shadow-[0px_4px_10px_#00000026]">
           <p className="text-black">Book Now</p>
         </div>
-        <div
+        <div onClick={HandleContact}
           className="cursor-pointer border border-[#E2E8F0] flex justify-center p-[10px] rounded-[8px] px-[20px] items-center bg-transparent drop-shadow-xl shadow-[0px_4px_10px_#00000026]"
         >
           <p className="text-white">Contact Us</p>
