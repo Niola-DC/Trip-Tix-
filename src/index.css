@@ -156,6 +156,15 @@ select option {
   color: white;
 }
 
+.custom-date-input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+}
+
+.custom-date-input::-ms-clear {
+  display: none;
+}
+
 .active {
   border-bottom: 2px solid #FBD007;
 }
@@ -222,12 +231,6 @@ select option {
 
 }
 
-@media only screen and (max-width: 700px) {
-  .view-ticket {
-    margin-top: 900px;
-  }
-}
-
 @media only screen and (max-width: 768px) {
   .con {
     flex-direction: column;
@@ -265,51 +268,21 @@ select option {
   }
 }
 
-@media only screen and (max-width: 1013px) {
-  .view-ticket {
-    margin-top: 200px;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
-  .view-ticket {
-    margin-top: 200px;
-  }
-}
-
 @media only screen and (max-width: 800px) {
-  .aboutus-header {
-    height: 130dvh;
-  }
-
   .content {
     top: 20%;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .aboutus-header {
-    height: 200dvh;
-  }
-
   .content {
     top: 15%;
   }
 }
 
 @media only screen and (max-width: 400px) {
-  .aboutus-header {
-    height: 200dvh;
-  }
-
   .content {
     top: 15%;
-  }
-}
-
-@media only screen and (max-width: 300px) {
-  .aboutus-header {
-    height: 250dvh;
   }
 }
 

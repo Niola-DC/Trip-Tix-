@@ -57,7 +57,7 @@ const Brands = () => {
       <div className="flex justify-center items-center gap-2 text-[#757575] w-full p-[10px]">
         <hr className="w-[33%]" />
         <p className="font-[400] text-[18px] leading-[27.27px]">
-          Brands with NIIT BUs Buddy
+          Brands with TripTrix
         </p>
         <hr className="w-[33%]" />
       </div>

@@ -110,11 +110,8 @@ export default function SearchSort() {
                 <FaCalendarAlt />
               </div>
               <input
-                type="text"
-                placeholder="MM/DD/YYYY"
-                value={date}
-                onChange={handleDateChange}
-                className="text-black focus:outline-none rounded-r-[5px] w-full focus:shadow-outline p-[10px]"
+                type="date"
+                className="text-black custom-date-input focus:outline-none rounded-r-[5px] w-full focus:shadow-outline p-[10px]"
               />
             </div>
           </div>
@@ -125,18 +122,15 @@ export default function SearchSort() {
                 <FaCalendarAlt />
               </div>
               <input
-                type="text"
-                placeholder="MM/DD/YYYY"
-                value={returnDate}
-                onChange={handleReturnDateChange}
-                className="text-black focus:outline-none rounded-r-[5px] w-full focus:shadow-outline p-[10px]"
+                type="date"
+                className="text-black custom-date-input focus:outline-none rounded-r-[5px] w-full focus:shadow-outline p-[10px]"
               />
             </div>
           </div>
           <div className="flex flex-col gap-[5px]">
             Adult (18+)
             <select className="text-black p-[10px] focus:outline-none focus:shadow-outline rounded-[5px]">
-              <option disabled value="">
+              <option value="">
                 Select
               </option>
               <option value="18-20">18-20</option>
@@ -147,7 +141,7 @@ export default function SearchSort() {
           <div className="flex flex-col gap-[5px]">
             Chrildren (0-17)
             <select className="text-black p-[10px] focus:outline-none focus:shadow-outline rounded-[5px]">
-              <option disabled value="">
+              <option value="">
                 Select
               </option>
               <option value="0-5">0-5</option>
@@ -159,18 +153,18 @@ export default function SearchSort() {
           </div>
         </div>
         <div className="flex sm:flex-row gap-[10px] flex-col w-full justify-between mb-[0px]">
-          <div className="bg-[#FBD007] p-[10px] text-[18px] xl:text-[25px] lg:text-[25px] sm:text-[20px] font-[600] text-[#0E385C] flex justify-center items-center px-[50px] rounded-[5px]">
+          <div className="bg-[#FBD007] p-[10px] text-[18px] xl:text-[25px] lg:text-[25px] sm:text-[20px] font-[600] text-[#0E385C] cursor-pointer flex justify-center items-center px-[50px] rounded-[5px]">
             SEARCH
           </div>
           <div>
             <select className="text-white p-[10px] bg-transparent border-hidden focus:outline-none focus:shadow-outline rounded-[5px]">
               <option value="">Advance Options</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
-              <option value="">Hello</option>
+              <option value="">Travel Duration</option>
+              <option value="">Departure Time</option>
+              <option value="">Arrival Time</option>
+              <option value="">Bus Type</option>
+              <option value="">Price Range</option>
+              <option value="">Bus Rating</option>
             </select>
           </div>
         </div>
