@@ -19,7 +19,7 @@ const BookTicket = () => {
             Search
           </p>
           <p className="p font-[400] flex text-[16px] text-center leading-[19.38px]">
-            Search for trips to various destinations.
+            Search for trips to various destinations at your convenience.
           </p>
         </div>
         <div className="flex cursor-pointer flex-col gap-[15px] justify-center items-center">
