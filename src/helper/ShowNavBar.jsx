@@ -11,6 +11,10 @@ const ShowNavBar = ({ children }) => {
             setNavBar(false);
         } else if (location.pathname === "/signUp") {
             setNavBar(false);
+        } else if (location.pathname === "/EditHomepage") {
+            setNavBar(false);
+        } else if (location.pathname === "/users") {
+            setNavBar(false);
         } else {
             setNavBar(true);
         }

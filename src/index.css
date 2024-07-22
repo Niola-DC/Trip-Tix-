@@ -301,3 +301,62 @@ select option {
   justify-content: center;
 
 }
+
+@layer utilities {
+  @media only screen and (max-width: 889px) {
+    .hide {
+      display: none;
+    }
+
+
+  }
+
+  @media only screen and (min-width: 890px) {
+    .hide {
+      display: block;
+    }
+  }
+
+  @media only screen and (max-width: 889px) {
+    .mobile {
+      display: block;
+    }
+  }
+
+
+}
+
+@font-face {
+  font-family: "Styrene";
+  src: url("./assets/fonts/StyreneAWeb-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Styrenes";
+  src: url("./assets/fonts/StyreneAWeb-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "StyreneThin";
+  src: url("./assets/fonts/StyreneAWeb-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "StyreneBold";
+  src: url("./assets/fonts/StyreneAWeb-Medium.ttf") format("truetype");
+}
+
+.zIndex {
+  z-index: 999 !important;
+}
+
+.zIndexs {
+  z-index: 9999 !important;
+}
+
+.noscroll {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}

@@ -11,6 +11,8 @@ import Contact from "./components/contact/Contact";
 import Login from "./components/login-signup/Login";
 import ShowNavBar from "./helper/ShowNavBar";
 import SignUp from "./components/login-signup/SignUp";
+import EditHomepage from "./components/admin-dashboard/EditHomepage";
+import Users from "./components/admin-dashboard/Users";
 
 const Layout = () => {
   return (
@@ -20,7 +22,9 @@ const Layout = () => {
       </ShowNavBar>
       <Outlet />
       <ScrollRestoration />
-      <Footer />
+      <ShowNavBar>
+        <Footer />
+      </ShowNavBar>
     </div>
   );
 };
@@ -37,6 +41,8 @@ const router = createBrowserRouter([
       { path: '/contact', element: <Contact /> },
       { path: '/login', element: <Login /> },
       { path: '/signUp', element: <SignUp /> },
+      { path: '/EditHomepage', element: <EditHomepage /> },
+      { path: '/users', element: <Users /> },
     ],
   },
 ]);
