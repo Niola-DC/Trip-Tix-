@@ -19,7 +19,7 @@ const BookTicket = () => {
             Search
           </p>
           <p className="p font-[400] flex text-[16px] text-center leading-[19.38px]">
-            Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+            Search for trips to various destinations.
           </p>
         </div>
         <div className="flex cursor-pointer flex-col gap-[15px] justify-center items-center">
@@ -30,7 +30,7 @@ const BookTicket = () => {
             Select Seat
           </p>
           <p className="p font-[400] flex text-[16px] text-center leading-[19.38px]">
-            Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+            Select your seat at your earliest convenience to ensure you get the one you prefer.
           </p>
         </div>
         <div className="flex cursor-pointer flex-col gap-[15px] justify-center items-center">
@@ -41,7 +41,7 @@ const BookTicket = () => {
             Make Payment
           </p>
           <p className="p font-[400] flex text-[16px] text-center leading-[19.38px]">
-            Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+            Make your payment for your trips at your earliest convenience.
           </p>
         </div>
         <div className="flex flex-col cursor-pointer gap-[15px] justify-center items-center">
@@ -52,7 +52,7 @@ const BookTicket = () => {
             Recieve Ticket
           </p>
           <p className="p font-[400] flex text-[16px] text-center leading-[19.38px]">
-            Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+            Get your tickets for your trips after every booking.
           </p>
         </div>
       </div>
