@@ -173,7 +173,7 @@ export default function SearchSort() {
             <p className="font-[500]">Returns: {trip.returns}</p>
           </div>
         ))}
-      </div>
+      </div> 
     </div>
   );
 }

@@ -11,7 +11,6 @@ const ViewTicket = () => {
     const token = localStorage.getItem('token');
 
     if (token) {
-      // Fetch bookings with token if user is authenticated
       axios.get('http://trip-tix-production.up.railway.app/trip/bookings', {
         headers: {
           'Authorization': `Bearer ${token}`
@@ -34,11 +33,15 @@ const ViewTicket = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="text-center text-lg text-gray-600">Loading...</div>;
   }
 
   if (error) {
-    return <div>{error}</div>;
+    return (
+      <div className="text-center text-lg text-red-600 mt-10">
+        <p>{error}</p>
+      </div>
+    );
   }
 
   return (

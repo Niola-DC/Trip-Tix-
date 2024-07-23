@@ -81,4 +81,4 @@ const Seats = () => {
     )
 }
 
-export default Seats
+export default Seats;

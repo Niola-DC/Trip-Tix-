@@ -1,16 +1,36 @@
-// TabContent.jsx
-import React from "react";
+import React, { useState } from "react";
 import TripCard from "./TripCard";
-import tripData from "./tripData"; // Import the tripData array
+import TransportFilter from "./TransportFilter";
+import SeatModal from "./SeatModal";
+import axios from "axios";
 
 const TabContent = ({ content }) => {
+  const [trips, setTrips] = useState([]);
+  const [selectedTrip, setSelectedTrip] = useState(null);
+  const [isSeatModalOpen, setIsSeatModalOpen] = useState(false);
+  const [user, setUser] = useState({ email: "user@example.com" }); // Replace with actual user data
+
+  const handleTripsSubmit = (fetchedTrips) => {
+    setTrips(fetchedTrips);
+  };
+
+  const handleOpenSeatModal = (trip) => {
+    setSelectedTrip(trip);
+    setIsSeatModalOpen(true);
+  };
+
+  const handleSeatModalClose = () => {
+    setSelectedTrip(null);
+    setIsSeatModalOpen(false);
+  };
+
   return (
     <div className="bg-white p-4 rounded-b-lg  md:w-10/12 mx-auto">
       {content}
-      <div className="flex  justify-between gap-14">
+      <div className="flex justify-between gap-14">
         <div className="departure-times hidden md:block mt-4 space-y-2">
           <h2 className="text-lg font-semibold mb-2">Departure Time</h2>
-          <div className="flex  items-center space-x-4 text-gray-500 py-2">
+          <div className="flex items-center space-x-4 text-gray-500 py-2">
             <input
               type="checkbox"
               id="timeOption1"
@@ -20,9 +40,7 @@ const TabContent = ({ content }) => {
             <label htmlFor="timeOption1" className="text-sm">
               Nighttime (0)
             </label>
-            <span className="text-sm">
-            Before 6am
-            </span>
+            <span className="text-sm">Before 6am</span>
           </div>
           <div className="flex items-center space-x-4 text-gray-500 py-2">
             <input
@@ -34,9 +52,7 @@ const TabContent = ({ content }) => {
             <label htmlFor="timeOption2" className="text-sm">
               Early (2)
             </label>
-            <span className="text-sm">
-            6am - 11am
-            </span>
+            <span className="text-sm">6am - 11am</span>
           </div>
           <div className="flex items-center space-x-4 text-gray-500 py-2">
             <input
@@ -46,11 +62,9 @@ const TabContent = ({ content }) => {
               className="form-checkbox h-5 w-5 text-blue-600"
             />
             <label htmlFor="timeOption3" className="text-sm">
-              Midday (0) 
+              Midday (0)
             </label>
-            <span className="text-sm">
-            11am - 5pm
-            </span>
+            <span className="text-sm">11am - 5pm</span>
           </div>
           <div className="flex items-center space-x-4 text-gray-500 py-2">
             <input
@@ -60,24 +74,37 @@ const TabContent = ({ content }) => {
               className="form-checkbox h-5 w-5 text-blue-600"
             />
             <label htmlFor="timeOption4" className="text-sm">
-              Late (0) 
+              Late (0)
             </label>
-            <span className="text-sm">
-            After 5pm
-            </span>
+            <span className="text-sm">After 5pm</span>
           </div>
         </div>
 
-        <div>
-          {tripData.length > 0 ? (
-            tripData.map((trip, index) => (
-              <TripCard key={index} tripData={trip} />
+        <TransportFilter onSubmit={handleTripsSubmit} />
+
+        <div className="trip-cards-container">
+          {trips.length > 0 ? (
+            trips.map((trip) => (
+              <TripCard
+                key={trip.id}
+                tripData={trip}
+                onOpenSeatModal={() => handleOpenSeatModal(trip)}
+              />
             ))
           ) : (
-            <p>No trip data available.</p>
+            <div className="no-trips-message">No Trips Available</div>
           )}
         </div>
       </div>
+
+      {/* {selectedTrip && (
+        <SeatModal
+          isOpen={isSeatModalOpen}
+          onClose={handleSeatModalClose}
+          trip={selectedTrip}
+          user={user}
+        />
+      )} */}
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { BsAlarm, BsArrowRight, BsBusFrontFill } from 'react-icons/bs';
 import SeatModal from './SeatModal';
 
 const TripCard = ({ tripData }) => {
-  const { departureTime, arrivalTime, origin, destination, seatsAvailable, adultPrice, childPrice } = tripData;
+  const { departureTime, arrivalTime, origin, destination, seatsAvailable, Price } = tripData;
   const [isSeatModalOpen, setIsSeatModalOpen] = useState(false);
 
   const handleSeatModalClose = () => {
@@ -42,8 +42,7 @@ const TripCard = ({ tripData }) => {
         </div>
         <p className="text-gray-500 mb-2">{seatsAvailable}</p>
         <div className="flex justify-between items-center mb-2">
-          <p className="text-green-600 font-semibold">Adult ₦{adultPrice}</p>
-          <p className="text-green-600 font-semibold">Child ₦{childPrice}</p>
+          <p className="text-green-600 font-semibold">Price ₦{Price}</p>
         </div>
         <button onClick={handleOpenSeatModal} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           View Seats

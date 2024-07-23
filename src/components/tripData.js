@@ -7,8 +7,7 @@ const tripData = [
     origin: 'Lagos',
     destination: 'Enugu',
     seatsAvailable: '15 (Seats Available)',
-    adultPrice: 30165,
-    childPrice: 24665,
+    Price: 30065,
   },
   {
     departureTime: '10:00am',
@@ -16,8 +15,7 @@ const tripData = [
     origin: 'Abuja',
     destination: 'Port Harcourt',
     seatsAvailable: '20 (Seats Available)',
-    adultPrice: 25000,
-    childPrice: 18000,
+    Price: 25000,
   },
   // Add more trip objects as needed
 ];
