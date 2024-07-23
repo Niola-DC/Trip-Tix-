@@ -99,32 +99,32 @@ export default function Users() {
           </li>
           <li>
             <div className="p-4 hover:border-b-2 hover:border-b-[#FBD007]">
-              <Link to="/EditOrder">
+              <Link to="/booking">
                 <div>Bookings</div>
               </Link>
             </div>
           </li>
           <li>
             <div className="p-4 hover:border-b-2 hover:border-b-[#FBD007]">
-              <Link to="/Products">
+              <Link to="/reviews">
                 <div>Reviews</div>
               </Link>
             </div>
           </li>
           <li>
             <div className="p-4 hover:border-b-2 hover:border-b-[#FBD007]">
-              <Link to="/NewProducts">
-                <div>New Products</div>
+              <Link to="/newUsers">
+                <div>New Users</div>
               </Link>
             </div>
           </li>
-          <li>
+          {/* <li>
             <div className="p-4 hover:border-b-2 hover:border-b-[#FBD007]">
               <Link to="/Order">
                 <div>Profile</div>
               </Link>
             </div>
-          </li>
+          </li> */}
           <li>
             <div className="p-4 hover:border-b-2 hover:border-b-[#FBD007]">
               <Link to="/">
@@ -139,7 +139,7 @@ export default function Users() {
           <header>
             <div className=" my-4 items-center">
               <h1 className="font-[590] text-2xl mb-4">Users</h1>
-              <button className="bg-[#0E385C] tracking-wide w-28 hover:bg-opacity-[0.5] py-2 rounded-md text-white">Add new +</button>
+              <Link to={"/newUsers"} className="bg-[#0E385C] px-4 tracking-wide w-28 hover:bg-opacity-[0.5] py-2 rounded-md text-white">Add new +</Link>
             </div>
           </header>
           <form>
@@ -162,7 +162,7 @@ export default function Users() {
               </div>
             </div>
           </form>
-          <table className="w-full border border-gray-300 bg-slate-200 rounded-lg shadow-lg p-4">
+          <table className="w-full border overflow-x-auto drop-shadow-xl shadow-[0px_4px_10px_#00000026] border-gray-300 bg-slate-200 rounded-lg p-4">
             <thead>
               <tr>
                 <th className="font-bold bg-slate-500 p-2">
@@ -173,7 +173,7 @@ export default function Users() {
                   />
                 </th>
                 <th className="fontBold bg-slate-500  text-white p-4">#</th>
-                <th className="fontBold bg-slate-500  text-white p-4">First Name</th>
+                <th className="fontBold bg-slate-500  text-white p-4">First</th>
 
 
                 <th className="fontBold bg-slate-500  text-white p-4">Last Name</th>
@@ -197,7 +197,30 @@ export default function Users() {
                 </td>
                 <td className="text-center p-4">Doe22145@yahoo.com</td>
                 <td className="text-center p-4">923312440</td>
-                <td className="text-center p-4 "><span className="bg-green-400 p-2 rounded-md">Active</span></td>
+                <td className="text-center p-4 "><span className="bg-green-400 text-white p-2 rounded-md">Active</span></td>
+                <td className="text-center p-4"><div className="hover:visible">
+                  <Link to="/" className="text-red-500 hover:underline">
+                    Delete
+                  </Link>
+                  <Link to="/" className=" hover:underline ml-4">
+                    View
+                  </Link>
+                </div></td>
+
+              </tr>
+              <tr className="p-5 bg-white">
+                <td className="text-center p-4 ">
+                  <input type="checkbox" />
+                </td>
+
+                <td className="text-center p-4">1110</td>
+                <td className="text-center p-4">John</td>
+                <td className="text-center p-4">
+                  Doe
+                </td>
+                <td className="text-center p-4">Doe22145@yahoo.com</td>
+                <td className="text-center p-4">923312440</td>
+                <td className="text-center p-4 "><span className="bg-red-500 p-2 text-white rounded-md">Expired</span></td>
                 <td className="text-center p-4"><div className="hover:visible">
                   <Link to="/" className="text-red-500 hover:underline">
                     Delete
@@ -209,25 +232,49 @@ export default function Users() {
 
               </tr>
               <tr className="p-5">
-                <td className="text-center p-4 bg-white">
+                <td className="text-center p-4">
                   <input type="checkbox" />
                 </td>
 
-                <td className="text-center p-4 bg-white">
-                  <Link to="/">Product 1</Link>
-                  <div className="hover:visible">
-                    <Link to="/" className="text-red-500 hover:underline">
-                      Delete
-                    </Link>
-                    <Link to="/" className=" hover:underline ml-4">
-                      View
-                    </Link>
-                  </div>
+                <td className="text-center p-4">1110</td>
+                <td className="text-center p-4">John</td>
+                <td className="text-center p-4">
+                  Doe
                 </td>
-                <td className="text-center p-4 bg-white">2 days ago</td>
-                <td className="text-center p-4 bg-white"><span className="bg-red-500 p-2 rounded-md">cancelled</span></td>
-                <td className="text-center p-4 bg-white">$19.99</td>
-                <td className="text-center p-4 bg-white">99</td>
+                <td className="text-center p-4">Doe22145@yahoo.com</td>
+                <td className="text-center p-4">923312440</td>
+                <td className="text-center p-4 "><span className="bg-red-400 text-white p-2 rounded-md">Draft</span></td>
+                <td className="text-center p-4"><div className="hover:visible">
+                  <Link to="/" className="text-red-500 hover:underline">
+                    Delete
+                  </Link>
+                  <Link to="/" className=" hover:underline ml-4">
+                    View
+                  </Link>
+                </div></td>
+
+              </tr>
+              <tr className="p-5 bg-white">
+                <td className="text-center p-4 ">
+                  <input type="checkbox" />
+                </td>
+
+                <td className="text-center p-4">1110</td>
+                <td className="text-center p-4">John</td>
+                <td className="text-center p-4">
+                  Doe
+                </td>
+                <td className="text-center p-4">Doe22145@yahoo.com</td>
+                <td className="text-center p-4">923312440</td>
+                <td className="text-center p-4 "><span className="bg-yellow-500 p-2 text-white rounded-md">Featured</span></td>
+                <td className="text-center p-4"><div className="hover:visible">
+                  <Link to="/" className="text-red-500 hover:underline">
+                    Delete
+                  </Link>
+                  <Link to="/" className=" hover:underline ml-4">
+                    View
+                  </Link>
+                </div></td>
 
               </tr>
               <tr className="p-5">
@@ -235,87 +282,45 @@ export default function Users() {
                   <input type="checkbox" />
                 </td>
 
+                <td className="text-center p-4">1110</td>
+                <td className="text-center p-4">John</td>
                 <td className="text-center p-4">
-                  <Link to="/">Product 1</Link>
-                  <div className="hover:visible">
-                    <Link to="/" className="text-red-500 hover:underline">
-                      Delete
-                    </Link>
-                    <Link to="/" className=" hover:underline ml-4">
-                      View
-                    </Link>
-                  </div>
+                  Doe
                 </td>
-                <td className="text-center p-4">2 days ago</td>
-                <td className="text-center p-4 "><span className="bg-gray-400 p-2 rounded-md">pending payment</span></td>
-                <td className="text-center p-4">$19.99</td>
-                <td className="text-center p-4">9</td>
+                <td className="text-center p-4">Doe22145@yahoo.com</td>
+                <td className="text-center p-4">923312440</td>
+                <td className="text-center p-4 "><span className="bg-green-400 text-white p-2 rounded-md">Active</span></td>
+                <td className="text-center p-4"><div className="hover:visible">
+                  <Link to="/" className="text-red-500 hover:underline">
+                    Delete
+                  </Link>
+                  <Link to="/" className=" hover:underline ml-4">
+                    View
+                  </Link>
+                </div></td>
 
               </tr>
-              <tr className="p-5">
-                <td className="text-center p-4 bg-white">
+              <tr className="p-5 bg-white">
+                <td className="text-center p-4 ">
                   <input type="checkbox" />
                 </td>
 
-                <td className="text-center p-4 bg-white">
-                  <Link to="/">Product 1</Link>
-                  <div className="hover:visible">
-                    <Link to="/" className="text-red-500 hover:underline">
-                      Delete
-                    </Link>
-                    <Link to="/" className=" hover:underline ml-4">
-                      View
-                    </Link>
-                  </div>
-                </td>
-                <td className="text-center p-4 bg-white">2 days ago</td>
-                <td className="text-center p-4 bg-white"><span className="bg-green-300 p-2 rounded-md">pending payment</span></td>
-                <td className="text-center p-4 bg-white">$19.99</td>
-                <td className="text-center p-4 bg-white">99</td>
-
-              </tr>
-              <tr className="p-5">
+                <td className="text-center p-4">1110</td>
+                <td className="text-center p-4">John</td>
                 <td className="text-center p-4">
-                  <input type="checkbox" />
+                  Doe
                 </td>
-
-                <td className="text-center p-4">
-                  <Link to="/">Product 1</Link>
-                  <div className="hover:visible">
-                    <Link to="/" className="text-red-500 hover:underline">
-                      Delete
-                    </Link>
-                    <Link to="/" className=" hover:underline ml-4">
-                      View
-                    </Link>
-                  </div>
-                </td>
-                <td className="text-center p-4">2 days ago</td>
-                <td className="text-center p-4 "><span className="bg-gray-400 p-2 rounded-md">pending payment</span></td>
-                <td className="text-center p-4">$19.99</td>
-                <td className="text-center p-4">99</td>
-
-              </tr>
-              <tr className="p-5">
-                <td className="text-center p-4 bg-white">
-                  <input type="checkbox" />
-                </td>
-
-                <td className="text-center p-4 bg-white">
-                  <Link to="/">Product 1</Link>
-                  <div className="hover:visible">
-                    <Link to="/" className="text-red-500 hover:underline">
-                      Delete
-                    </Link>
-                    <Link to="/" className=" hover:underline ml-4">
-                      View
-                    </Link>
-                  </div>
-                </td>
-                <td className="text-center p-4 bg-white">2 days ago</td>
-                <td className="text-center p-4 bg-white"><span className="bg-green-300 p-2 rounded-md">pending payment</span></td>
-                <td className="text-center p-4 bg-white">$19.99</td>
-                <td className="text-center p-4 bg-white">8</td>
+                <td className="text-center p-4">Doe22145@yahoo.com</td>
+                <td className="text-center p-4">923312440</td>
+                <td className="text-center p-4 "><span className="bg-red-500 p-2 text-white rounded-md">Expired</span></td>
+                <td className="text-center p-4"><div className="hover:visible">
+                  <Link to="/" className="text-red-500 hover:underline">
+                    Delete
+                  </Link>
+                  <Link to="/" className=" hover:underline ml-4">
+                    View
+                  </Link>
+                </div></td>
 
               </tr>
 
@@ -324,21 +329,22 @@ export default function Users() {
                   <input type="checkbox" />
                 </td>
 
+                <td className="text-center p-4">1110</td>
+                <td className="text-center p-4">John</td>
                 <td className="text-center p-4">
-                  <Link to="/">Product 1</Link>
-                  <div className="hover:visible">
-                    <Link to="/" className="text-red-500 hover:underline">
-                      Delete
-                    </Link>
-                    <Link to="/" className=" hover:underline ml-4">
-                      View
-                    </Link>
-                  </div>
+                  Doe
                 </td>
-                <td className="text-center p-4">2 days ago</td>
-                <td className="text-center p-4 "><span className="bg-gray-400 p-2 rounded-md">pending payment</span></td>
-                <td className="text-center p-4">$19.99</td>
-                <td className="text-center p-4">29</td>
+                <td className="text-center p-4">Doe22145@yahoo.com</td>
+                <td className="text-center p-4">923312440</td>
+                <td className="text-center p-4 "><span className="bg-red-400 text-white p-2 rounded-md">Draft</span></td>
+                <td className="text-center p-4"><div className="hover:visible">
+                  <Link to="/" className="text-red-500 hover:underline">
+                    Delete
+                  </Link>
+                  <Link to="/" className=" hover:underline ml-4">
+                    View
+                  </Link>
+                </div></td>
 
               </tr>
             </tbody>

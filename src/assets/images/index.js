@@ -25,10 +25,14 @@ import toyota from '../images/Toyota.png'
 import header_bus from '../images/header_bus.png'
 import buses from '../images/buses.png'
 import google from '../images/google.png'
+import man from '../images/man.png'
+import woman from '../images/woman.png'
 
 export {
     bus1,
     bus2,
+    woman,
+    man,
     google,
     header_bus,
     buses,

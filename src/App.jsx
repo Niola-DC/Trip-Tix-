@@ -13,6 +13,9 @@ import ShowNavBar from "./helper/ShowNavBar";
 import SignUp from "./components/login-signup/SignUp";
 import EditHomepage from "./components/admin-dashboard/EditHomepage";
 import Users from "./components/admin-dashboard/Users";
+import NewUsers from "./components/admin-dashboard/NewUsers";
+import Reviews from "./components/admin-dashboard/Reviews";
+import Bookings from "./components/admin-dashboard/Bookings";
 
 const Layout = () => {
   return (
@@ -43,6 +46,9 @@ const router = createBrowserRouter([
       { path: '/signUp', element: <SignUp /> },
       { path: '/EditHomepage', element: <EditHomepage /> },
       { path: '/users', element: <Users /> },
+      { path: '/newUsers', element: <NewUsers /> },
+      { path: '/reviews', element: <Reviews /> },
+      { path: '/booking', element: <Bookings /> },
     ],
   },
 ]);

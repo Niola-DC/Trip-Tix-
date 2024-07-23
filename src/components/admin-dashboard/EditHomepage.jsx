@@ -35,32 +35,32 @@ export default function EditHomepage() {
           </li>
           <li>
             <div className="p-4 hover:border-b-2 hover:border-b-[#FBD007]">
-              <Link to="/EditOrder">
+              <Link to="/booking">
                 <div>Bookings</div>
               </Link>
             </div>
           </li>
           <li>
             <div className="p-4 hover:border-b-2 hover:border-b-[#FBD007]">
-              <Link to="/Products">
+              <Link to="/reviews">
                 <div>Reviews</div>
               </Link>
             </div>
           </li>
           <li>
             <div className="p-4 hover:border-b-2 hover:border-b-[#FBD007]">
-              <Link to="/NewProducts">
-                <div>New Products</div>
+              <Link to="/newUsers">
+                <div>New Users</div>
               </Link>
             </div>
           </li>
-          <li>
+          {/* <li>
             <div className="p-4 hover:border-b-2 hover:border-b-[#FBD007]">
               <Link to="/Order">
                 <div>Profile</div>
               </Link>
             </div>
-          </li>
+          </li> */}
           <li>
             <div className="p-4 hover:border-b-2 hover:border-b-[#FBD007]">
               <Link to="/">
@@ -73,7 +73,7 @@ export default function EditHomepage() {
       <div className="flex-1 bg-white border h-full text-base overflow-scroll noscroll p-4 ml-0">
         <header>
           <div className="flex my-4 items-center">
-            <h1 className="text-lg font-[590]">Dashboard</h1>
+            <h1 className="text-2xl font-[590]">Dashboard</h1>
           </div>
           <p className="text-md text-slate-400">
             You've reached the editing dashboard homepage, where you can modify and personalize your dashboard experience.

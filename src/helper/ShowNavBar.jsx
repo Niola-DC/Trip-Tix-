@@ -15,6 +15,12 @@ const ShowNavBar = ({ children }) => {
             setNavBar(false);
         } else if (location.pathname === "/users") {
             setNavBar(false);
+        } else if (location.pathname === "/newUsers") {
+            setNavBar(false);
+        } else if (location.pathname === "/reviews") {
+            setNavBar(false);
+        } else if (location.pathname === "/booking") {
+            setNavBar(false);
         } else {
             setNavBar(true);
         }
