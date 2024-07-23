@@ -5,7 +5,7 @@ import { MdMailOutline } from "react-icons/md";
 import SmallCards from './SmallCards';
 import DashboardCharts from './DashboardCharts';
 
-export default function EditHomepage() {
+const EditHomepage = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
 
   const toggleSidebar = () => {
@@ -92,3 +92,5 @@ export default function EditHomepage() {
     </div>
   );
 }
+
+export default EditHomepage;
