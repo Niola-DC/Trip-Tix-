@@ -5,7 +5,7 @@ import { man, woman } from "../../assets/images";
 import { FiMenu } from "react-icons/fi";
 import Notification from "./Notification";
 
-const Bookings = () => {
+export default function Bookings() {
   const [selectAll, setSelectAll] = useState(false);
   const [sidebarVisible, setSidebarVisible] = useState(false);
 
@@ -285,4 +285,4 @@ const Bookings = () => {
     </div>
   );
 }
-export default Bookings;
+
