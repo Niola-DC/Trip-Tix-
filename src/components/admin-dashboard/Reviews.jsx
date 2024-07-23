@@ -3,6 +3,7 @@ import { FiMenu } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { man, woman } from '../../assets/images';
 import Star from './Star';
+import Notification from './Notification';
 
 export default function Reviews() {
     const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -74,8 +75,9 @@ export default function Reviews() {
             </div>
             <div className="flex-1 bg-white border h-full text-base overflow-scroll noscroll p-4 ml-0">
                 <header>
-                    <div className="my-4 items-center">
+                    <div className="my-4 flex justify-between items-center">
                         <h1 className="font-[590] text-2xl mb-8">Reviews</h1>
+                        <Notification/>
                     </div>
                 </header>
                 <div className='border p-4 border-white drop-shadow-xl shadow-[0px_4px_10px_#00000026]'>
