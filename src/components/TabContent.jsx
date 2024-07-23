@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import TripCard from "./TripCard";
 import TransportFilter from "./TransportFilter";
-import SeatModal from "./SeatModal";
-import axios from "axios";
 
 const TabContent = ({ content }) => {
   const [trips, setTrips] = useState([]);
