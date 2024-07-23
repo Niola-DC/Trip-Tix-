@@ -25,7 +25,7 @@ export function TransportFilter({ onSubmit }) {
     setError(null);
 
     axios
-      .get("http://trip-tix-production.up.railway.app/trip/search", {
+      .get("/trip/search", {
         params: form,
       })
       .then((response) => {

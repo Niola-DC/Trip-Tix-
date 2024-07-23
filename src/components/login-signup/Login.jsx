@@ -4,14 +4,18 @@ import { FiEye, FiEyeOff } from 'react-icons/fi';
 import { google } from '../../assets/images';
 import { FaArrowLeftLong } from 'react-icons/fa6';
 import { useNavigate } from 'react-router-dom';
+import axiosClient from '../../../axiosClient';
+import { useStateContext } from '../../context/ContextProvider';
+
 
 const Login = () => {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
-  const [user, setUser] = useState(null);
+  // const [user] = useState(null);
   const navigate = useNavigate();
+  const {token,setToken,setUser} = useStateContext();
 
   const handleHome = () => {
     navigate('/');
@@ -27,7 +31,7 @@ const Login = () => {
 
   const handleRegister = (event) => {
     event.preventDefault();
-    axios.post('http://trip-tix-production.up.railway.app/api/auth/signup', {
+    axiosClient.post('/api/auth/login', {
       email,
       password,
     })
@@ -44,16 +48,16 @@ const Login = () => {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    axios.post('http://trip-tix-production.up.railway.app/api/auth/login', {
+    axiosClient.post('/api/auth/login', {
       email,
       password
     })
     .then(response => {
       console.log('Login successful:', response.data);
       // Save the token to local storage or context
-      localStorage.setItem('token', response.data.jwtToken);
+      // localStorage.setItem('token', response.data.jwtToken);
+      setToken(response.token);
       setMessage('Login successful!');
-      fetchUser();
       navigate('/');
     })
     .catch(error => {
@@ -62,23 +66,6 @@ const Login = () => {
     });
   };
 
-  const fetchUser = () => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      axios.get('http://trip-tix-production.up.railway.app/api/user', {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      })
-      .then(response => {
-        console.log('Authenticated user:', response.data);
-        setUser(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching user:', error);
-      });
-    }
-  };
 
   return (
     <div>

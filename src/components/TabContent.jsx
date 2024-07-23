@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import TripCard from "./TripCard";
-import TransportFilter from "./TransportFilter";
+import { TransportFilter } from "./TransportFilter";
 
 const TabContent = ({ content }) => {
   const [trips, setTrips] = useState([]);
   const [selectedTrip, setSelectedTrip] = useState(null);
   const [isSeatModalOpen, setIsSeatModalOpen] = useState(false);
-  const [user, setUser] = useState({ email: "user@example.com" }); // Replace with actual user data
+  const [user, setUser] = useState({ email: "user@example.com" }); 
 
   const handleTripsSubmit = (fetchedTrips) => {
     setTrips(fetchedTrips);

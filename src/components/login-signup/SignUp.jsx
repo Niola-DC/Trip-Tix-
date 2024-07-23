@@ -4,6 +4,7 @@ import { FiEye, FiEyeOff } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { google } from '../../assets/images';
+import axiosClient from '../../../axiosClient';
 
 const SignUp = () => {
     const [open, setOpen] = useState(false);
@@ -27,23 +28,36 @@ const SignUp = () => {
 
     const handleRegister = (event) => {
         event.preventDefault();
-        axios.post('http://trip-tix-production.up.railway.app/api/auth/signup', {
+        // // axios.post('http://trip-tix-production.up.railway.app/api/auth/signup', {
+        //     email,
+        //     password,
+        //     name
+        // })
+        // .then(response => {
+        //     console.log('Registration successful:', response.data);
+        //     setMessage('Registration successful!');
+        //     // Save the token to local storage
+        //     localStorage.setItem('token', response.data.jwtToken);
+        //     fetchUser();
+        //     navigate('/');
+        // })
+        // .catch(error => {
+        //     console.error('Error registering:', error);
+        //     setMessage('Registration failed, please try again.');
+        // });
+
+        axiosClient.post('/api/auth/signup', {
+            fullName: name,
             email,
             password,
-            name
-        })
-        .then(response => {
-            console.log('Registration successful:', response.data);
-            setMessage('Registration successful!');
-            // Save the token to local storage
-            localStorage.setItem('token', response.data.jwtToken);
-            fetchUser();
-            navigate('/');
+        }).then(response => {
+            console.log(fullName, email, password);
+            console.log(response);
         })
         .catch(error => {
-            console.error('Error registering:', error);
-            setMessage('Registration failed, please try again.');
-        });
+            console.log(error);
+        })
+
     };
 
     const fetchUser = () => {
