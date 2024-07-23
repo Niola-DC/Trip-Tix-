@@ -13,7 +13,7 @@ export default function Home() {
       <ViewTicket />
       <BookTicket />
       <Why />
-      <AdminDashboard/>
+      {/* <AdminDashboard/> */}
     </section>
   );
 }
