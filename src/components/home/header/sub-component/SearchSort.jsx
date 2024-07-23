@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { FaBusSimple } from "react-icons/fa6";
 import { FaCar } from "react-icons/fa";
 import { RiBus2Fill } from "react-icons/ri";
@@ -10,6 +11,9 @@ export default function SearchSort() {
   const [returnDate, setReturnDate] = useState("");
   const [activeElement, setActiveElement] = useState("bus1");
   const [activeBook, setActiveBook] = useState("book3");
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+  const [trips, setTrips] = useState([]);
 
   const handleElementClick = (element) => {
     setActiveElement(element);
@@ -20,24 +24,27 @@ export default function SearchSort() {
   };
 
   const handleDateChange = (event) => {
-    const formattedDate = event.target.value
-      .replace(/[^\d]/g, "")
-      .substring(0, 8)
-      .replace(/(\d{2})(\d{0,2})(\d{0,4})/, "$1/$2/$3");
-    setDate(formattedDate);
+    setDate(event.target.value);
   };
 
   const handleReturnDateChange = (event) => {
-    const formattedDate = event.target.value
-      .replace(/[^\d]/g, "")
-      .substring(0, 8)
-      .replace(/(\d{2})(\d{0,2})(\d{0,4})/, "$1/$2/$3");
-    setReturnDate(formattedDate);
+    setReturnDate(event.target.value);
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const response = await axios.get(
+        `http://trip-tix-production.up.railway.app/trip/search?from=${from}&to=${to}`
+      );
+      setTrips(response.data);
+    } catch (error) {
+      console.error("Error fetching trips:", error);
+    }
   };
 
   return (
-    <div className=" flex flex-col overflow-hidden overflow-y-auto text-white rounded-[5px] text-sm tracking-wide">
-      <div className=" bg-[#0E385C] bg-opacity-[80%] p-[30px] drop-shadow-xl shadow-[0px_4px_10px_#00000026]">
+    <div className="flex flex-col overflow-hidden overflow-y-auto text-white rounded-[5px] text-sm tracking-wide">
+      <div className="bg-[#0E385C] bg-opacity-[80%] p-[30px] drop-shadow-xl shadow-[0px_4px_10px_#00000026]">
         <div className="flex w-full mb-[20px] gap-[20px]">
           <div className="flex flex-col gap-[5px] sm:gap-[10px]">
             <p>Your choice</p>
@@ -86,6 +93,8 @@ export default function SearchSort() {
               <input
                 type="text"
                 className="w-full focus:outline-none text-black focus:shadow-outline p-[10px]"
+                value={from}
+                onChange={(e) => setFrom(e.target.value)}
               />
             </div>
           </div>
@@ -98,6 +107,8 @@ export default function SearchSort() {
               <input
                 type="text"
                 className="w-full focus:outline-none text-black focus:shadow-outline p-[10px]"
+                value={to}
+                onChange={(e) => setTo(e.target.value)}
               />
             </div>
           </div>
@@ -112,7 +123,9 @@ export default function SearchSort() {
               <input
                 type="date"
                 placeholder="mm/dd/yyyy"
-                className="text-black bg-white custom-date-input focus:outline-none rounded-r-[5px] w-full focus:shadow-outline p-[10px]"
+                className="w-full focus:outline-none text-black focus:shadow-outline p-[10px]"
+                value={date}
+                onChange={handleDateChange}
               />
             </div>
           </div>
@@ -125,37 +138,18 @@ export default function SearchSort() {
               <input
                 type="date"
                 placeholder="mm/dd/yyyy"
-                className="text-black bg-white custom-date-input focus:outline-none rounded-r-[5px] w-full focus:shadow-outline p-[10px]"
+                className="w-full focus:outline-none text-black focus:shadow-outline p-[10px]"
+                value={returnDate}
+                onChange={handleReturnDateChange}
               />
             </div>
           </div>
-          <div className="flex flex-col gap-[5px]">
-            Adult (18+)
-            <select className="text-black p-[10px] focus:outline-none focus:shadow-outline rounded-[5px]">
-              <option value="">
-                Select
-              </option>
-              <option value="18-20">18-20</option>
-              <option value="21-30">21-30</option>
-              <option value="40 and above">40+</option>
-            </select>
-          </div>
-          <div className="flex flex-col gap-[5px]">
-            Chrildren (0-17)
-            <select className="text-black p-[10px] focus:outline-none focus:shadow-outline rounded-[5px]">
-              <option value="">
-                Select
-              </option>
-              <option value="0-5">0-5</option>
-              <option value="6-10">6-10</option>
-              <option value="11-15">11-15</option>
-              <option value="16-17">16-17</option>
-              <option value="0-5">None</option>
-            </select>
-          </div>
         </div>
         <div className="flex sm:flex-row gap-[10px] flex-col w-full justify-between mb-[0px]">
-          <div className="bg-[#FBD007] p-[10px] text-[18px] xl:text-[25px] lg:text-[25px] sm:text-[20px] font-[600] text-[#0E385C] cursor-pointer flex justify-center items-center px-[50px] rounded-[5px]">
+          <div
+            className="bg-[#FBD007] p-[10px] text-[18px] xl:text-[25px] lg:text-[25px] sm:text-[20px] font-[600] text-[#0E385C] cursor-pointer flex justify-center items-center px-[50px] rounded-[5px]"
+            onClick={handleSubmit}
+          >
             SEARCH
           </div>
           <div>
@@ -172,38 +166,13 @@ export default function SearchSort() {
         </div>
       </div>
       <div className="bg-white leading-[30.26px] w-full text-[18px] xl:text-[25px] lg:text-[25px] sm:text-[20px] p-[30px] border drop-shadow-xl border-b border-b-white shadow-[0px_4px_10px_#00000026] text-[#0E385C] gap-[30px] grid grid-cols-2 xl:grid-cols-3 lg:grid-cols-2">
-        <div className="flex justify-center items-center">
-          <div
-            className={`book1 p-[10px] rounded-[5px] cursor-pointer ${
-              activeBook === "book1" ? "active2" : ""
-            }`}
-            onClick={() => handleBookClick("book1")}
-          >
-            <p className="font-[600]">BOOK AND TRAVEL</p>
-            <p className="font-[500]">WITH EASE</p>
+        {trips.map((trip) => (
+          <div key={trip.id} className="flex flex-col justify-center items-center p-[10px]">
+            <p className="font-[600]">{trip.from} to {trip.to}</p>
+            <p className="font-[500]">Departs: {trip.departs}</p>
+            <p className="font-[500]">Returns: {trip.returns}</p>
           </div>
-        </div>
-        <div className="flex justify-center items-center">
-          <div
-            className={`book2 p-[10px] rounded-[5px] cursor-pointer ${
-              activeBook === "book2" ? "active2" : ""
-            }`}
-            onClick={() => handleBookClick("book2")}
-          >
-            <p className="font-[600]">FAST & QUICK</p>
-            <p className="font-[500]">PICKUP SERVICE</p>
-          </div>
-        </div>
-        <div className="flex justify-center  items-center">
-          <p
-            className={`book3 p-[10px] rounded-[5px] cursor-pointer font-[600] ${
-              activeBook === "book3" ? "active2" : ""
-            }`}
-            onClick={() => handleBookClick("book3")}
-          >
-            BOOK TICKET{" "}
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   );
