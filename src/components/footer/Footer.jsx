@@ -132,6 +132,10 @@ const Footer = () => {
                   <RiArrowRightSLine size={"1.5rem"} />
                   <p className="cursor-pointer">FAQ</p>
                 </Link>
+                <Link to={"/EditHomepage"} className="flex items-center gap-[5px]">
+                  <RiArrowRightSLine size={"1.5rem"} />
+                  <p className="cursor-pointer">Admin</p>
+                </Link>
               </div>
             </div>
             <div className="flex flex-col w-full">
