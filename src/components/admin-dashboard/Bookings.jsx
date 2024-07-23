@@ -5,7 +5,7 @@ import { man, woman } from "../../assets/images";
 import { FiMenu } from "react-icons/fi";
 import Notification from "./Notification";
 
-export default function Bookings() {
+const Bookings = () => {
   const [selectAll, setSelectAll] = useState(false);
   const [sidebarVisible, setSidebarVisible] = useState(false);
 
