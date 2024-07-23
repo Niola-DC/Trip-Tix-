@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Pagination from "./Pagination";
 import { FiMenu } from "react-icons/fi";
+import Notification from "./Notification";
 
 export default function Users() {
   const [selectAll, setSelectAll] = useState(false);
@@ -137,9 +138,12 @@ export default function Users() {
       <div className="col-span-9 flex-1 bg-white border h-full text-base overflow-scroll noscroll p-4 ml-0">
         <div className="p-4">
           <header>
-            <div className=" my-4 items-center">
-              <h1 className="font-[590] text-2xl mb-4">Users</h1>
-              <Link to={"/newUsers"} className="bg-[#0E385C] px-4 tracking-wide w-28 hover:bg-opacity-[0.5] py-2 rounded-md text-white">Add new +</Link>
+            <div className=" my-4 flex justify-between items-center">
+              <div>
+                <h1 className="font-[590] text-2xl mb-4">Users</h1>
+                <Link to={"/newUsers"} className="bg-[#0E385C] px-4 tracking-wide w-28 hover:bg-opacity-[0.5] py-2 rounded-md text-white">Add new +</Link>
+              </div>
+              <Notification />
             </div>
           </header>
           <form>
@@ -158,197 +162,199 @@ export default function Users() {
               </div>
               <div className="flex gap-1 items-center">
                 <p>Search:</p>
-                <input type="text" className="border-black border-2 p-1  rounded-lg "/>
+                <input type="text" className="border-black border-2 p-1  rounded-lg " />
               </div>
             </div>
           </form>
-          <table className="w-full border overflow-x-auto drop-shadow-xl shadow-[0px_4px_10px_#00000026] border-gray-300 bg-slate-200 rounded-lg p-4">
-            <thead>
-              <tr>
-                <th className="font-bold bg-slate-500 p-2">
-                  <input
-                    type="checkbox"
-                    checked={selectAll}
-                    onChange={handleSelectAllChange}
-                  />
-                </th>
-                <th className="fontBold bg-slate-500  text-white p-4">#</th>
-                <th className="fontBold bg-slate-500  text-white p-4">First</th>
+          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table className="w-full border overflow-x-auto drop-shadow-xl shadow-[0px_4px_10px_#00000026] border-gray-300 bg-slate-200 rounded-lg p-4">
+              <thead>
+                <tr>
+                  <th className="font-bold bg-slate-500 p-2">
+                    <input
+                      type="checkbox"
+                      checked={selectAll}
+                      onChange={handleSelectAllChange}
+                    />
+                  </th>
+                  <th className="fontBold bg-slate-500  text-white p-4">#</th>
+                  <th className="fontBold bg-slate-500  text-white p-4">First</th>
 
 
-                <th className="fontBold bg-slate-500  text-white p-4">Last Name</th>
-                <th className="fontBold bg-slate-500  text-white p-4">Email</th>
-                <th className="fontBold bg-slate-500  text-white p-4">Phone #</th>
-                <th className="fontBold bg-slate-500  text-white p-4">Status</th>
-                <th className="fontBold bg-slate-500  text-white p-4">Action</th>
+                  <th className="fontBold bg-slate-500  text-white p-4">Last Name</th>
+                  <th className="fontBold bg-slate-500  text-white p-4">Email</th>
+                  <th className="fontBold bg-slate-500  text-white p-4">Phone #</th>
+                  <th className="fontBold bg-slate-500  text-white p-4">Status</th>
+                  <th className="fontBold bg-slate-500  text-white p-4">Action</th>
 
-              </tr>
-            </thead>
-            <tbody className="p-5 ">
-              <tr className="p-5">
-                <td className="text-center p-4">
-                  <input type="checkbox" />
-                </td>
+                </tr>
+              </thead>
+              <tbody className="p-5 ">
+                <tr className="p-5">
+                  <td className="text-center p-4">
+                    <input type="checkbox" />
+                  </td>
 
-                <td className="text-center p-4">1110</td>
-                <td className="text-center p-4">John</td>
-                <td className="text-center p-4">
-                  Doe
-                </td>
-                <td className="text-center p-4">Doe22145@yahoo.com</td>
-                <td className="text-center p-4">923312440</td>
-                <td className="text-center p-4 "><span className="bg-green-400 text-white p-2 rounded-md">Active</span></td>
-                <td className="text-center p-4"><div className="hover:visible">
-                  <Link to="/" className="text-red-500 hover:underline">
-                    Delete
-                  </Link>
-                  <Link to="/" className=" hover:underline ml-4">
-                    View
-                  </Link>
-                </div></td>
+                  <td className="text-center p-4">1110</td>
+                  <td className="text-center p-4">John</td>
+                  <td className="text-center p-4">
+                    Doe
+                  </td>
+                  <td className="text-center p-4">Doe22145@yahoo.com</td>
+                  <td className="text-center p-4">923312440</td>
+                  <td className="text-center p-4 "><span className="bg-green-400 text-white p-2 rounded-md">Active</span></td>
+                  <td className="text-center p-4"><div className="hover:visible">
+                    <Link to="/" className="text-red-500 hover:underline">
+                      Delete
+                    </Link>
+                    <Link to="/" className=" hover:underline ml-4">
+                      View
+                    </Link>
+                  </div></td>
 
-              </tr>
-              <tr className="p-5 bg-white">
-                <td className="text-center p-4 ">
-                  <input type="checkbox" />
-                </td>
+                </tr>
+                <tr className="p-5 bg-white">
+                  <td className="text-center p-4 ">
+                    <input type="checkbox" />
+                  </td>
 
-                <td className="text-center p-4">1110</td>
-                <td className="text-center p-4">John</td>
-                <td className="text-center p-4">
-                  Doe
-                </td>
-                <td className="text-center p-4">Doe22145@yahoo.com</td>
-                <td className="text-center p-4">923312440</td>
-                <td className="text-center p-4 "><span className="bg-red-500 p-2 text-white rounded-md">Expired</span></td>
-                <td className="text-center p-4"><div className="hover:visible">
-                  <Link to="/" className="text-red-500 hover:underline">
-                    Delete
-                  </Link>
-                  <Link to="/" className=" hover:underline ml-4">
-                    View
-                  </Link>
-                </div></td>
+                  <td className="text-center p-4">1110</td>
+                  <td className="text-center p-4">John</td>
+                  <td className="text-center p-4">
+                    Doe
+                  </td>
+                  <td className="text-center p-4">Doe22145@yahoo.com</td>
+                  <td className="text-center p-4">923312440</td>
+                  <td className="text-center p-4 "><span className="bg-red-500 p-2 text-white rounded-md">Expired</span></td>
+                  <td className="text-center p-4"><div className="hover:visible">
+                    <Link to="/" className="text-red-500 hover:underline">
+                      Delete
+                    </Link>
+                    <Link to="/" className=" hover:underline ml-4">
+                      View
+                    </Link>
+                  </div></td>
 
-              </tr>
-              <tr className="p-5">
-                <td className="text-center p-4">
-                  <input type="checkbox" />
-                </td>
+                </tr>
+                <tr className="p-5">
+                  <td className="text-center p-4">
+                    <input type="checkbox" />
+                  </td>
 
-                <td className="text-center p-4">1110</td>
-                <td className="text-center p-4">John</td>
-                <td className="text-center p-4">
-                  Doe
-                </td>
-                <td className="text-center p-4">Doe22145@yahoo.com</td>
-                <td className="text-center p-4">923312440</td>
-                <td className="text-center p-4 "><span className="bg-red-400 text-white p-2 rounded-md">Draft</span></td>
-                <td className="text-center p-4"><div className="hover:visible">
-                  <Link to="/" className="text-red-500 hover:underline">
-                    Delete
-                  </Link>
-                  <Link to="/" className=" hover:underline ml-4">
-                    View
-                  </Link>
-                </div></td>
+                  <td className="text-center p-4">1110</td>
+                  <td className="text-center p-4">John</td>
+                  <td className="text-center p-4">
+                    Doe
+                  </td>
+                  <td className="text-center p-4">Doe22145@yahoo.com</td>
+                  <td className="text-center p-4">923312440</td>
+                  <td className="text-center p-4 "><span className="bg-red-400 text-white p-2 rounded-md">Draft</span></td>
+                  <td className="text-center p-4"><div className="hover:visible">
+                    <Link to="/" className="text-red-500 hover:underline">
+                      Delete
+                    </Link>
+                    <Link to="/" className=" hover:underline ml-4">
+                      View
+                    </Link>
+                  </div></td>
 
-              </tr>
-              <tr className="p-5 bg-white">
-                <td className="text-center p-4 ">
-                  <input type="checkbox" />
-                </td>
+                </tr>
+                <tr className="p-5 bg-white">
+                  <td className="text-center p-4 ">
+                    <input type="checkbox" />
+                  </td>
 
-                <td className="text-center p-4">1110</td>
-                <td className="text-center p-4">John</td>
-                <td className="text-center p-4">
-                  Doe
-                </td>
-                <td className="text-center p-4">Doe22145@yahoo.com</td>
-                <td className="text-center p-4">923312440</td>
-                <td className="text-center p-4 "><span className="bg-yellow-500 p-2 text-white rounded-md">Featured</span></td>
-                <td className="text-center p-4"><div className="hover:visible">
-                  <Link to="/" className="text-red-500 hover:underline">
-                    Delete
-                  </Link>
-                  <Link to="/" className=" hover:underline ml-4">
-                    View
-                  </Link>
-                </div></td>
+                  <td className="text-center p-4">1110</td>
+                  <td className="text-center p-4">John</td>
+                  <td className="text-center p-4">
+                    Doe
+                  </td>
+                  <td className="text-center p-4">Doe22145@yahoo.com</td>
+                  <td className="text-center p-4">923312440</td>
+                  <td className="text-center p-4 "><span className="bg-yellow-500 p-2 text-white rounded-md">Featured</span></td>
+                  <td className="text-center p-4"><div className="hover:visible">
+                    <Link to="/" className="text-red-500 hover:underline">
+                      Delete
+                    </Link>
+                    <Link to="/" className=" hover:underline ml-4">
+                      View
+                    </Link>
+                  </div></td>
 
-              </tr>
-              <tr className="p-5">
-                <td className="text-center p-4">
-                  <input type="checkbox" />
-                </td>
+                </tr>
+                <tr className="p-5">
+                  <td className="text-center p-4">
+                    <input type="checkbox" />
+                  </td>
 
-                <td className="text-center p-4">1110</td>
-                <td className="text-center p-4">John</td>
-                <td className="text-center p-4">
-                  Doe
-                </td>
-                <td className="text-center p-4">Doe22145@yahoo.com</td>
-                <td className="text-center p-4">923312440</td>
-                <td className="text-center p-4 "><span className="bg-green-400 text-white p-2 rounded-md">Active</span></td>
-                <td className="text-center p-4"><div className="hover:visible">
-                  <Link to="/" className="text-red-500 hover:underline">
-                    Delete
-                  </Link>
-                  <Link to="/" className=" hover:underline ml-4">
-                    View
-                  </Link>
-                </div></td>
+                  <td className="text-center p-4">1110</td>
+                  <td className="text-center p-4">John</td>
+                  <td className="text-center p-4">
+                    Doe
+                  </td>
+                  <td className="text-center p-4">Doe22145@yahoo.com</td>
+                  <td className="text-center p-4">923312440</td>
+                  <td className="text-center p-4 "><span className="bg-green-400 text-white p-2 rounded-md">Active</span></td>
+                  <td className="text-center p-4"><div className="hover:visible">
+                    <Link to="/" className="text-red-500 hover:underline">
+                      Delete
+                    </Link>
+                    <Link to="/" className=" hover:underline ml-4">
+                      View
+                    </Link>
+                  </div></td>
 
-              </tr>
-              <tr className="p-5 bg-white">
-                <td className="text-center p-4 ">
-                  <input type="checkbox" />
-                </td>
+                </tr>
+                <tr className="p-5 bg-white">
+                  <td className="text-center p-4 ">
+                    <input type="checkbox" />
+                  </td>
 
-                <td className="text-center p-4">1110</td>
-                <td className="text-center p-4">John</td>
-                <td className="text-center p-4">
-                  Doe
-                </td>
-                <td className="text-center p-4">Doe22145@yahoo.com</td>
-                <td className="text-center p-4">923312440</td>
-                <td className="text-center p-4 "><span className="bg-red-500 p-2 text-white rounded-md">Expired</span></td>
-                <td className="text-center p-4"><div className="hover:visible">
-                  <Link to="/" className="text-red-500 hover:underline">
-                    Delete
-                  </Link>
-                  <Link to="/" className=" hover:underline ml-4">
-                    View
-                  </Link>
-                </div></td>
+                  <td className="text-center p-4">1110</td>
+                  <td className="text-center p-4">John</td>
+                  <td className="text-center p-4">
+                    Doe
+                  </td>
+                  <td className="text-center p-4">Doe22145@yahoo.com</td>
+                  <td className="text-center p-4">923312440</td>
+                  <td className="text-center p-4 "><span className="bg-red-500 p-2 text-white rounded-md">Expired</span></td>
+                  <td className="text-center p-4"><div className="hover:visible">
+                    <Link to="/" className="text-red-500 hover:underline">
+                      Delete
+                    </Link>
+                    <Link to="/" className=" hover:underline ml-4">
+                      View
+                    </Link>
+                  </div></td>
 
-              </tr>
+                </tr>
 
-              <tr className="p-5">
-                <td className="text-center p-4">
-                  <input type="checkbox" />
-                </td>
+                <tr className="p-5">
+                  <td className="text-center p-4">
+                    <input type="checkbox" />
+                  </td>
 
-                <td className="text-center p-4">1110</td>
-                <td className="text-center p-4">John</td>
-                <td className="text-center p-4">
-                  Doe
-                </td>
-                <td className="text-center p-4">Doe22145@yahoo.com</td>
-                <td className="text-center p-4">923312440</td>
-                <td className="text-center p-4 "><span className="bg-red-400 text-white p-2 rounded-md">Draft</span></td>
-                <td className="text-center p-4"><div className="hover:visible">
-                  <Link to="/" className="text-red-500 hover:underline">
-                    Delete
-                  </Link>
-                  <Link to="/" className=" hover:underline ml-4">
-                    View
-                  </Link>
-                </div></td>
+                  <td className="text-center p-4">1110</td>
+                  <td className="text-center p-4">John</td>
+                  <td className="text-center p-4">
+                    Doe
+                  </td>
+                  <td className="text-center p-4">Doe22145@yahoo.com</td>
+                  <td className="text-center p-4">923312440</td>
+                  <td className="text-center p-4 "><span className="bg-red-400 text-white p-2 rounded-md">Draft</span></td>
+                  <td className="text-center p-4"><div className="hover:visible">
+                    <Link to="/" className="text-red-500 hover:underline">
+                      Delete
+                    </Link>
+                    <Link to="/" className=" hover:underline ml-4">
+                      View
+                    </Link>
+                  </div></td>
 
-              </tr>
-            </tbody>
-          </table>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         <div className="my-14">
           <Pagination />

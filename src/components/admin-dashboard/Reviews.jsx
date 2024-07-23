@@ -83,7 +83,7 @@ export default function Reviews() {
                 <div className='border p-4 border-white drop-shadow-xl shadow-[0px_4px_10px_#00000026]'>
                     <p className='text-2xl font-[590] mb-4'>Reviews</p> <hr />
 
-                    <div className='lg:p-8 flex flex-col gap-8'>
+                    <div className='lg:p-8 pt-8 flex flex-col gap-8'>
                         <div className='flex gap-4'>
                             <div className="max-w-20 max-h-20 rounded-full flex items-center justify-center bg-gray-100">
                                 <img src={man} alt="person" className='object-cover h-full w-full rounded-full' />

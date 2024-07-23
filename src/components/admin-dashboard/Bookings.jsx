@@ -24,7 +24,7 @@ export default function Bookings() {
   };
 
   return (
-    <div className="flex h-[100vh]">
+    <div className="flex h-[100vh] overflow-hidden">
       <div className={`sidebar bg-[#0E385C] noscroll  overflow-scroll text-white w-[70%] lg:w-[26%] border border-gray-300 h-full fixed md:relative transition-transform transform ${sidebarVisible ? 'translate-x-0  z-50' : '-translate-x-full md:translate-x-0'
         }`}>
         <ul className="px-4 cursor-pointer text-[20px]">
@@ -102,13 +102,14 @@ export default function Bookings() {
                 </div>
                 <p className="font-medium">entries</p>
               </div>
-              <div className="flex gap-1 items-center">
+              <div className="sm:flex gap-1 items-center">
                 <p>Search:</p>
                 <input type="text" className="border-black border-2 p-1  rounded-lg " />
               </div>
             </div>
           </form>
-          <table className="w-full border overflow-x-auto mr-12 drop-shadow-xl shadow-[0px_4px_10px_#00000026] border-gray-300 bg-slate-200 rounded-lg p-1">
+          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table className="w-full border mr-12 drop-shadow-xl shadow-[0px_4px_10px_#00000026] border-gray-300 bg-slate-200 rounded-lg lg:p-4 p-[20px]">
             <thead>
               <tr>
                 <th className="fontBold bg-slate-500  text-white p-4">Image</th>
@@ -272,6 +273,7 @@ export default function Bookings() {
               </tr>
             </tbody>
           </table>
+          </div>
         </div>
         <div className="my-14">
           <Pagination />

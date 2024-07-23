@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { MdMailOutline } from "react-icons/md";
 import SmallCards from './SmallCards';
 import DashboardCharts from './DashboardCharts';
+import Notification from './Notification';
 
 export default function EditHomepage()  {
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -72,8 +73,9 @@ export default function EditHomepage()  {
       </div>
       <div className="flex-1 bg-white border h-full text-base overflow-scroll noscroll p-4 ml-0">
         <header>
-          <div className="flex my-4 items-center">
-            <h1 className="text-2xl font-[590]">Dashboard</h1>
+          <div className="flex mt-8 justify-between my-4 items-center">
+            <h1 className="text-2xl mb-4 font-[590]">Dashboard</h1>
+            <Notification/>
           </div>
           <p className="text-md text-slate-400">
             You've reached the editing dashboard homepage, where you can modify and personalize your dashboard experience.

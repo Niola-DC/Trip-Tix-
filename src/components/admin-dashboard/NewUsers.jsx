@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FiEye, FiEyeOff, FiMenu } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import PhoneNumberInput from '../contact/header/PhoneNumberInput';
+import Notification from './Notification';
 
 export default function NewUsers() {
     const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -85,8 +86,9 @@ export default function NewUsers() {
             </div>
             <div className="flex-1 bg-white border h-full text-base overflow-scroll noscroll p-4 ml-0">
                 <header>
-                    <div className="my-4 items-center">
+                    <div className="my-4 flex justify-between items-center">
                         <h1 className="font-[590] text-2xl mb-8">Users</h1>
+                        <Notification/>
                     </div>
                 </header>
 
