@@ -134,7 +134,7 @@ export default function Bookings() {
                 <td className="text-center p-4 bg-white">Doe22145@yahoo.com</td>
                 <td className="text-center p-4 bg-white">11/06/2019</td>
                 <td className="text-center p-4 bg-white">15/06/2019</td>
-                <td className="text-center p-4 "><span className="bg-green-400 p-2 text-white rounded-md">pending</span></td>
+                <td className="text-center bg-white p-4 "><span className="bg-green-400 p-2 text-white rounded-md">pending</span></td>
                 <td className="text-center p-4 bg-white"><div className="hover:visible">
                   <Link to="/" className="text-red-500 hover:underline">
                     Delete
@@ -148,15 +148,15 @@ export default function Bookings() {
                 <td className="text-center p-4">
                   <img src={woman} alt="Product" className="w-16 h-16 mx-auto my-3" />
                 </td>
-                <td className="text-center p-4 bg-white">
+                <td className="text-center p-4">
                   John Doe
                 </td>
-                <td className="text-center p-4 bg-white">923312440</td>
-                <td className="text-center p-4 bg-white">Doe22145@yahoo.com</td>
-                <td className="text-center p-4 bg-white">11/06/2019</td>
-                <td className="text-center p-4 bg-white">15/06/2019</td>
+                <td className="text-center p-4">923312440</td>
+                <td className="text-center p-4">Doe22145@yahoo.com</td>
+                <td className="text-center p-4">11/06/2019</td>
+                <td className="text-center p-4">15/06/2019</td>
                 <td className="text-center p-4 "><span className="bg-yellow-400 p-2 text-white rounded-md">pending</span></td>
-                <td className="text-center p-4 bg-white"><div className="hover:visible">
+                <td className="text-center p-4"><div className="hover:visible">
                   <Link to="/" className="text-red-500 hover:underline">
                     Delete
                   </Link>
@@ -176,7 +176,7 @@ export default function Bookings() {
                 <td className="text-center p-4 bg-white">Doe22145@yahoo.com</td>
                 <td className="text-center p-4 bg-white">11/06/2019</td>
                 <td className="text-center p-4 bg-white">15/06/2019</td>
-                <td className="text-center p-4 "><span className="bg-red-600 p-2 text-white rounded-md">Cancelled</span></td>
+                <td className="text-center bg-white p-4 "><span className="bg-red-600 p-2 text-white rounded-md">Cancelled</span></td>
                 <td className="text-center p-4 bg-white"><div className="hover:visible">
                   <Link to="/" className="text-red-500 hover:underline">
                     Delete
@@ -190,15 +190,15 @@ export default function Bookings() {
                 <td className="text-center p-4">
                   <img src={woman} alt="Product" className="w-16 h-16 mx-auto my-3" />
                 </td>
-                <td className="text-center p-4 bg-white">
+                <td className="text-center p-4">
                   John Doe
                 </td>
-                <td className="text-center p-4 bg-white">923312440</td>
-                <td className="text-center p-4 bg-white">Doe22145@yahoo.com</td>
-                <td className="text-center p-4 bg-white">11/06/2019</td>
-                <td className="text-center p-4 bg-white">15/06/2019</td>
+                <td className="text-center p-4">923312440</td>
+                <td className="text-center p-4">Doe22145@yahoo.com</td>
+                <td className="text-center p-4">11/06/2019</td>
+                <td className="text-center p-4">15/06/2019</td>
                 <td className="text-center p-4 "><span className="bg-red-600 p-2 text-white rounded-md">Cancelled</span></td>
-                <td className="text-center p-4 bg-white"><div className="hover:visible">
+                <td className="text-center p-4"><div className="hover:visible">
                   <Link to="/" className="text-red-500 hover:underline">
                     Delete
                   </Link>
@@ -218,7 +218,7 @@ export default function Bookings() {
                 <td className="text-center p-4 bg-white">Doe22145@yahoo.com</td>
                 <td className="text-center p-4 bg-white">11/06/2019</td>
                 <td className="text-center p-4 bg-white">15/06/2019</td>
-                <td className="text-center p-4 "><span className="bg-green-400 p-2 text-white rounded-md">Approved</span></td>
+                <td className="text-center bg-white p-4 "><span className="bg-green-400 p-2 text-white rounded-md">Approved</span></td>
                 <td className="text-center p-4 bg-white"><div className="hover:visible">
                   <Link to="/" className="text-red-500 hover:underline">
                     Delete
@@ -232,15 +232,15 @@ export default function Bookings() {
                 <td className="text-center p-4">
                   <img src={woman} alt="Product" className="w-16 h-16 mx-auto my-3" />
                 </td>
-                <td className="text-center p-4 bg-white">
+                <td className="text-center p-4">
                   John Doe
                 </td>
-                <td className="text-center p-4 bg-white">923312440</td>
-                <td className="text-center p-4 bg-white">Doe22145@yahoo.com</td>
-                <td className="text-center p-4 bg-white">11/06/2019</td>
-                <td className="text-center p-4 bg-white">15/06/2019</td>
+                <td className="text-center p-4">923312440</td>
+                <td className="text-center p-4">Doe22145@yahoo.com</td>
+                <td className="text-center p-4">11/06/2019</td>
+                <td className="text-center p-4">15/06/2019</td>
                 <td className="text-center p-4 "><span className="bg-green-400 p-2 text-white rounded-md">Approved</span></td>
-                <td className="text-center p-4 bg-white"><div className="hover:visible">
+                <td className="text-center p-4"><div className="hover:visible">
                   <Link to="/" className="text-red-500 hover:underline">
                     Delete
                   </Link>
@@ -261,7 +261,7 @@ export default function Bookings() {
                 <td className="text-center p-4 bg-white">Doe22145@yahoo.com</td>
                 <td className="text-center p-4 bg-white">11/06/2019</td>
                 <td className="text-center p-4 bg-white">15/06/2019</td>
-                <td className="text-center p-4 "><span className="bg-yellow-400 p-2 text-white rounded-md">pending</span></td>
+                <td className="text-center bg-white p-4 "><span className="bg-yellow-400 p-2 text-white rounded-md">pending</span></td>
                 <td className="text-center p-4 bg-white"><div className="hover:visible">
                   <Link to="/" className="text-red-500 hover:underline">
                     Delete

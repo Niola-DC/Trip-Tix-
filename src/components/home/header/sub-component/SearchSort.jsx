@@ -113,7 +113,7 @@ export default function SearchSort() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 gap-[20px] mb-[20px]">
+        <div className="grid grid-cols-2 gap-[20px] mb-[20px]">
           <div className="flex flex-col gap-[5px]">
             <p>Departs</p>
             <div className="flex bg-white rounded-[5px] items-center">
@@ -123,7 +123,7 @@ export default function SearchSort() {
               <input
                 type="date"
                 placeholder="mm/dd/yyyy"
-                className="w-full focus:outline-none text-black focus:shadow-outline p-[10px]"
+                className="w-full rounded-[5px] focus:outline-none custom-date-input text-black focus:shadow-outline p-[10px]"
                 value={date}
                 onChange={handleDateChange}
               />
@@ -138,7 +138,7 @@ export default function SearchSort() {
               <input
                 type="date"
                 placeholder="mm/dd/yyyy"
-                className="w-full focus:outline-none text-black focus:shadow-outline p-[10px]"
+                className="w-full custom-date-input rounded-[5px] focus:outline-none text-black focus:shadow-outline p-[10px]"
                 value={returnDate}
                 onChange={handleReturnDateChange}
               />

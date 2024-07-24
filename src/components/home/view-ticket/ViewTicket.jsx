@@ -43,7 +43,7 @@ const ViewTicket = () => {
 
   if (error) {
     return (
-      <div className="text-center text-lg text-red-600 mt-10">
+      <div className="view-ticket cursor-pointer mt-[200px] sm:mt-[0px] w-full px-12 pt-[300px] pb-[100px] h-auto flex flex-col gap-[20px] justify-center items-center bg-white leading-[42.36px] text-red-600 font-[600] text-[30px] xl:text-[35px] lg:text-[35px]">
         <p>{error}</p>
       </div>
     );

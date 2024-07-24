@@ -160,7 +160,7 @@ export default function Users() {
                 </div>
                 <p className="font-medium">entries</p>
               </div>
-              <div className="flex gap-1 items-center">
+              <div className="sm:flex gap-1 items-center">
                 <p>Search:</p>
                 <input type="text" className="border-black border-2 p-1  rounded-lg " />
               </div>

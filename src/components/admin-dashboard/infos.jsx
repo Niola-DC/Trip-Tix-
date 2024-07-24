@@ -17,7 +17,7 @@ const infos = [
     },
     {
         icon: <IoBookmarkSharp />,
-        text: 'New Bookmarks',
+        text: 'New Users',
         num: '6',
     },
     {
