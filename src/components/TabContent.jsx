@@ -3,13 +3,14 @@ import TripCard from "./TripCard";
 import { TransportFilter } from "./TransportFilter";
 import axiosClient from '../../axiosClient';
 import { useNavigate } from 'react-router-dom';
+import tripData from "./tripData";
 
 const TabContent = ({ content }) => {
-  const [trips, setTrips] = useState([]);
+  const [trips, setTrips] = useState(tripData);
   const [selectedTrip, setSelectedTrip] = useState(null);
   const [isSeatModalOpen, setIsSeatModalOpen] = useState(false);
   const [user, setUser] = useState({ email: "user@example.com" });
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleTripsSubmit = (fetchedTrips) => {
     setTrips(fetchedTrips);
@@ -34,9 +35,9 @@ const TabContent = ({ content }) => {
       .catch(error => {
         console.error('Error fetching trips:', error);
         // Navigate to login if fetching trips fails
-        navigate('/login');
+        // navigate('/login');
       });
-  }, [navigate]);
+  }, []);
 
   return (
     <div className="bg-white p-4 rounded-b-lg md:w-10/12 mx-auto">
@@ -95,8 +96,8 @@ const TabContent = ({ content }) => {
         </div>
 
 
-        <div className="trip-cards-container">
-          {
+         <div className="trip-cards-container">
+          {trips.length > 0 ? (
             trips.map((trip) => (
               <TripCard
                 key={trip.id}
@@ -104,10 +105,9 @@ const TabContent = ({ content }) => {
                 onOpenSeatModal={() => handleOpenSeatModal(trip)}
               />
             ))
-          }
-          
-          {/* <div className="no-trips-message">No Trips Available</div> */}
-
+          ) : (
+            <div className="no-trips-message">No Trips Available</div>
+          )}
         </div>
       </div>
 

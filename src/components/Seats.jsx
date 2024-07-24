@@ -3,10 +3,11 @@ import { PiSeat } from "react-icons/pi";
 import { RiSteering2Fill } from "react-icons/ri";
 
 const Seats = () => {
+
     return (
         <div className='grid border-[3px] border-[#666C89] drop-shadow-xl shadow-[0px_4px_10px_#00000026] rounded-lg py-[10px] px-[10px] sm:px-[20px] grid-cols-5 gap-[30px]'>
             <div className='flex flex-col gap-4'>
-                <div className='relative cursor-pointer'>
+                <div  className='relative cursor-pointer'>
                     <PiSeat size={"2rem"} className='mt-1 text-[#0B142F]' />
                     <span className='absolute top-0 p right-0 font-[590] text-base'>15</span>
                 </div>
