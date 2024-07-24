@@ -37,7 +37,6 @@ export const ContextProvider = ({children}) => {
             token,
             setUser,
             setToken,
-            notification,
             setNotification,
         }}>
             {children}

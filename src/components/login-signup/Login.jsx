@@ -15,8 +15,12 @@ const Login = () => {
   const [message, setMessage] = useState('');
   // const [user] = useState(null);
   const navigate = useNavigate();
-  const {token,setToken,setUser} = useStateContext();
+  const {token,setToken} = useStateContext();
 
+  if(token){
+    return navigate("/")
+  }
+  
   const handleHome = () => {
     navigate('/');
   };
@@ -54,9 +58,7 @@ const Login = () => {
     })
     .then(response => {
       console.log('Login successful:', response.data);
-      // Save the token to local storage or context
-      // localStorage.setItem('token', response.data.jwtToken);
-      setToken(response.token);
+      setToken(response.data.token);
       setMessage('Login successful!');
       navigate('/');
     })
