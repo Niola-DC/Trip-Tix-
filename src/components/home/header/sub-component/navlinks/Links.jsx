@@ -3,11 +3,15 @@ import { IoPersonSharp } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import Menu from "./Menu";
 import GetStartedModal from "../GetStartedModal";
+import { useStateContext } from "../../../../../context/ContextProvider";
 
 export default function Links() {
   const [showModal, setShowModal] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
 
+  const {token} = useStateContext();
+
+  console.log(token);
   const handleShowModal = () => {
     setShowModal(true); // Always open the Dashboard
   };
@@ -60,13 +64,13 @@ export default function Links() {
           Contact
         </NavLink>
 
-        <div
+        {token == null && <div
           onClick={handleShowModal}
           className="px-5 ml-[100px] py-2 flex cursor-pointer Login justify-center font-[500] leading-[29.05px] items-center gap-2 rounded-[10px] text-white bg-transparent border border-white text-[24px] tracking-wide"
         >
           Sign in
           <IoPersonSharp />
-        </div>
+        </div>}
       </div>
       <Menu />
       <GetStartedModal isOpen={showModal} onClose={handleCloseModal} />

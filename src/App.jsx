@@ -16,6 +16,7 @@ import Users from "./components/admin-dashboard/Users";
 import NewUsers from "./components/admin-dashboard/NewUsers";
 import Reviews from "./components/admin-dashboard/Reviews";
 import Bookings from "./components/admin-dashboard/Bookings";
+import { ContextProvider } from "./context/ContextProvider";
 
 const Layout = () => {
   return (
@@ -56,7 +57,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div>
-      <RouterProvider router={router} />
+      <ContextProvider>
+        <RouterProvider router={router} />
+      </ContextProvider>
     </div>
   )
 }
