@@ -94,7 +94,7 @@ export default function NewUsers() {
 
                 <div className='border p-4 border-white drop-shadow-xl shadow-[0px_4px_10px_#00000026]'>
                     <p className='text-2xl font-[590] mb-4'>Create User</p> <hr />
-                    <form className='p-8 grid gap-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
+                    <form className='lg:p-8 p-4 grid gap-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
                         <div className='flex flex-col gap-5'>
                             <div className='flex flex-col gap-2'>
                                 <label className='font-medium text-base'>First Name :</label>
@@ -163,7 +163,7 @@ export default function NewUsers() {
                                         {imageFile1 && (
                                             <img
                                                 src={URL.createObjectURL(imageFile1)}
-                                                className="w-32"
+                                                className="w-32 h-32 object-cover"
                                                 alt="Uploaded"
                                             />
                                         )}
