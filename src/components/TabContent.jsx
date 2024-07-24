@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TripCard from "./TripCard";
 import { TransportFilter } from "./TransportFilter";
+import axiosClient from '../../axiosClient';
+import { useNavigate } from 'react-router-dom';
 
 const TabContent = ({ content }) => {
   const [trips, setTrips] = useState([]);
   const [selectedTrip, setSelectedTrip] = useState(null);
   const [isSeatModalOpen, setIsSeatModalOpen] = useState(false);
-  const [user, setUser] = useState({ email: "user@example.com" }); 
+  const [user, setUser] = useState({ email: "user@example.com" });
+  const navigate = useNavigate();
 
   const handleTripsSubmit = (fetchedTrips) => {
     setTrips(fetchedTrips);
@@ -22,8 +25,21 @@ const TabContent = ({ content }) => {
     setIsSeatModalOpen(false);
   };
 
+  useEffect(() => {
+    // Fetch trips data after signing in
+    axiosClient.get('/api/trips')
+      .then(response => {
+        setTrips(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching trips:', error);
+        // Navigate to login if fetching trips fails
+        navigate('/login');
+      });
+  }, [navigate]);
+
   return (
-    <div className="bg-white p-4 rounded-b-lg  md:w-10/12 mx-auto">
+    <div className="bg-white p-4 rounded-b-lg md:w-10/12 mx-auto">
       {content}
       <div className="flex justify-between gap-14">
         <div className="departure-times hidden md:block mt-4 space-y-2">
@@ -78,10 +94,9 @@ const TabContent = ({ content }) => {
           </div>
         </div>
 
-        <TransportFilter onSubmit={handleTripsSubmit} />
 
         <div className="trip-cards-container">
-          {trips.length > 0 ? (
+          {
             trips.map((trip) => (
               <TripCard
                 key={trip.id}
@@ -89,9 +104,10 @@ const TabContent = ({ content }) => {
                 onOpenSeatModal={() => handleOpenSeatModal(trip)}
               />
             ))
-          ) : (
-            <div className="no-trips-message">No Trips Available</div>
-          )}
+          }
+          
+          {/* <div className="no-trips-message">No Trips Available</div> */}
+
         </div>
       </div>
 
